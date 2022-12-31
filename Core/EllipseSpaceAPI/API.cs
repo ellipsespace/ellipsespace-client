@@ -6,7 +6,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EllipseSpaceClient.EllipseSpaceAPI
+namespace EllipseSpaceClient.Core.EllipseSpaceAPI
 {
     internal class API
     {

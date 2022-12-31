@@ -3,7 +3,7 @@ using System.IO;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace EllipseSpaceClient.Configuration
+namespace EllipseSpaceClient.Core.Configuration
 {
     internal class Configuration
     {

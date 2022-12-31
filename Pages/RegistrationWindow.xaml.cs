@@ -1,4 +1,4 @@
-﻿using EllipseSpaceClient.EllipseSpaceAPI;
+﻿using EllipseSpaceClient.Core.EllipseSpaceAPI;
 using EllipseSpaceClient.Models.Sessions;
 using System.Net.Http;
 using System.Windows;
