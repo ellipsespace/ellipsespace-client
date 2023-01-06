@@ -1,0 +1,29 @@
+﻿<Window x:Class="EllipseSpaceClient.Pages.Admin.CreateUpdateCatalogueObjectWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EllipseSpaceClient"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        mc:Ignorable="d"
+        Title="EllipseSpace" Height="500" Width="1000" WindowStartupLocation="CenterOwner" ResizeMode="CanMinimize">
+
+    <Grid Background="#141414">
+        <Border Margin="30" Background="#222222">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" ShadowDepth="0"/>
+            </Border.Effect>
+
+            <StackPanel Orientation="Vertical">
+                <DataGrid x:Name="catalogueObjectDG" Margin="10" HorizontalAlignment="Center" Background="#333333" RowBackground="#333333" Foreground="{DynamicResource MaterialDesignPaper}" Style="{DynamicResource MaterialDesignDataGrid}" AutoGenerateColumns="True"/>
+                <Button x:Name="saveButton" Style="{DynamicResource MaterialDesignFlatButton}" MaxWidth="100" Click="saveButton_Click">Сохранить</Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EllipseSpaceClient.Core.EllipseSpaceAPI
 {
-    internal class API
+    public class API
     {
         /// <summary>
         /// Presents JWT authorization token
@@ -25,7 +25,7 @@ namespace EllipseSpaceClient.Core.EllipseSpaceAPI
             ApiKey = apiKey;
         }
 
-        internal async Task<string> SendRequest(string address, HttpMethod reqMethod, bool authRequired, string? reqBody)
+        internal HttpResponseMessage SendRequest(string address, HttpMethod reqMethod, bool authRequired, string? reqBody = null)
         {
             using (HttpClient client = new HttpClient())
             {
@@ -37,9 +37,9 @@ namespace EllipseSpaceClient.Core.EllipseSpaceAPI
                     if (authRequired)
                         req.Headers.Add("Authorization", $"Bearer {ApiKey}");
 
-                    using (var resp = client.Send(req))
+                    using (var resp = client.SendAsync(req))
                     {
-                        return await resp.Content.ReadAsStringAsync();
+                        return resp.Result;
                     }
                 }
             }

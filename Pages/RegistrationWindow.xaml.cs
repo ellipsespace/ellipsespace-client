@@ -1,5 +1,9 @@
-﻿using EllipseSpaceClient.Core.EllipseSpaceAPI;
+﻿using EllipseSpaceClient.Core.Configuration;
+using EllipseSpaceClient.Core.EllipseSpaceAPI;
+using EllipseSpaceClient.Models.ServerStatus;
 using EllipseSpaceClient.Models.Sessions;
+using EllipseSpaceClient.Pages;
+using System;
 using System.Net.Http;
 using System.Windows;
 
@@ -20,17 +24,25 @@ namespace EllipseSpaceClient
 
             if(rSP != sessionPassword)
             {
-                MessageBox.Show("Пароли не совпадают.");
+                new MessageWindow(MaterialDesignThemes.Wpf.PackIconKind.FaceConfusedOutline, "Пароли не совпадают").ShowDialog();
                 return;
             }
 
             var session = new Session(sessionName, sessionPassword);
 
-            var id = new API().SendRequest(API.MakeAddress("/session/create"), HttpMethod.Post, false, session.Marshal());
+            var idResp = new API().SendRequest(API.MakeAddress("/session/create"), HttpMethod.Post, false, session.Marshal());
+            string id = idResp.Content.ReadAsStringAsync().Result.Replace("\"", "");
 
-            var configuration = new Configuration.Configuration();
-            configuration.Id = id.Result;
-            configuration.Save();
+            if(idResp.IsSuccessStatusCode) 
+            {
+                var configuration = Configuration.Create();
+                configuration.Id = Convert.ToInt32(id);
+                configuration.Save();
+
+                new MessageWindow(MaterialDesignThemes.Wpf.PackIconKind.FaceExcitedOutline, "Аккаунт зарегестрирован. Чтобы войти в него, вернитесь в предыдущее окно.").ShowDialog();
+            }
+            else
+                new MessageWindow(MaterialDesignThemes.Wpf.PackIconKind.EmojiSadOutline, ServerStatus.Unmarshal(idResp.Content.ReadAsStringAsync().Result).Message);
         }
     }
 }

@@ -4,5 +4,6 @@ namespace EllipseSpaceClient
 {
     public partial class App : Application
     {
+
     }
 }

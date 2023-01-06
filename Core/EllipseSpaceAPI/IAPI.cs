@@ -3,9 +3,9 @@ using System.Threading.Tasks;
 
 namespace EllipseSpaceClient.Core.EllipseSpaceAPI
 {
-    internal interface IAPI
+    public interface IAPI
     {
         Task<string> SendRequest(string address, HttpMethod reqMethod, bool authRequired, string? reqBody);
-        string MakeAddr(string relative);
+        string MakeAddress(string relative);
     }
 }
