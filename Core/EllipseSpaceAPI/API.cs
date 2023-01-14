@@ -1,14 +1,9 @@
 ﻿#pragma warning disable SYSLIB0014
-using System;
-using System.IO;
-using System.Net;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EllipseSpaceClient.Core.EllipseSpaceAPI
 {
-    public class API
+    public class API 
     {
         /// <summary>
         /// Presents JWT authorization token
@@ -25,7 +20,7 @@ namespace EllipseSpaceClient.Core.EllipseSpaceAPI
             ApiKey = apiKey;
         }
 
-        internal HttpResponseMessage SendRequest(string address, HttpMethod reqMethod, bool authRequired, string? reqBody = null)
+        public HttpResponseMessage SendRequest(string address, HttpMethod reqMethod, bool authRequired = false, string? reqBody = null)
         {
             using (HttpClient client = new HttpClient())
             {
@@ -45,7 +40,7 @@ namespace EllipseSpaceClient.Core.EllipseSpaceAPI
             }
         }
 
-        internal static string MakeAddress(string relative)
+        public static string MakeAddress(string relative)
         {
             return "https://ellipsespace.onrender.com/api" + relative;
         }

@@ -1,0 +1,67 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    
+    <!-- Authorization window -->
+    <v:String x:Key="head_authorization_window">EllipseSpace - Zaloguj się</v:String>
+    <v:String x:Key="l_welcome">Witam!</v:String>
+    <v:String x:Key="l_authorization_warning">Jeśli nie masz konta na EllipseSpace, użyj przycisku Zarejestruj się</v:String>
+    <v:String x:Key="h_login">Login</v:String>
+    <v:String x:Key="h_password">Hasło</v:String>
+    <v:String x:Key="b_log_in">Zaloguj się</v:String>
+    <v:String x:Key="b_registration">Rejestracja</v:String>
+    <v:String x:Key="l_new_version_1">Odkryto nową wersję klienta: </v:String>
+    <v:String x:Key="l_new_version_2">. Jeśli chcesz go zainstalować, kliknij przycisk Dobra.</v:String>
+    <v:String x:Key="l_update_downloaded">Plik z aktualizacją został pomyślnie pobrany. Zostanie uruchomiony zewnętrzny moduł w celu jego zainstalowania. Jeśli nie masz zewnętrznego modułu aktualizującego, po prostu rozpakuj zawartość pliku zip do folderu programu.</v:String>
+
+    <!-- Registration window -->
+    <v:String x:Key="head_registration_window">EllipseSpace - Rejestracja</v:String>
+    <v:String x:Key="l_registration_warning">Jeśli masz już konto EllipseSpace, użyj poprzedniego okna</v:String>
+    <v:String x:Key="h_password_repeat">Hasło (powtórzenie)</v:String>
+    <v:String x:Key="l_passwords_not_match">Hasła się nie zgadzają.</v:String>
+    <v:String x:Key="l_account_registred">Konto zostało zarejestrowane. Aby się zalogować, wróć do poprzedniego okna.</v:String>
+
+    <!-- Message window -->
+    <v:String x:Key="b_okay">Dobra</v:String>
+    <v:String x:Key="b_close">Zamknij</v:String>
+
+    <!-- Main window -->
+    <v:String x:Key="l_objects_catalogue">Katalog obiektów</v:String>
+    <v:String x:Key="l_admin_panel">Panel administracyjny</v:String>
+    <v:String x:Key="l_support_project">Wsparcie projektu</v:String>
+    <v:String x:Key="l_contacts">Skontaktuj się z nami</v:String>
+    <v:String x:Key="l_web">Strona</v:String>
+    <v:String x:Key="tbx_find_by_name">Szukaj według nazwiska...</v:String>
+    <v:String x:Key="tb_opening_date">Data otwarcia:</v:String>
+    <v:String x:Key="tb_scp">Okres konwersji syderycznej</v:String>
+    <v:String x:Key="tb_ovelocity">Prędkość orbitalna</v:String>
+    <v:String x:Key="tb_inclination">Nachylenie</v:String>
+    <v:String x:Key="tb_satelites">Satelity</v:String>
+    <v:String x:Key="tb_whose_satelite">Czyj satelita</v:String>
+    <v:String x:Key="tb_eradius">Promień równikowy</v:String>
+    <v:String x:Key="tb_pradius">Promień biegunowy</v:String>
+    <v:String x:Key="tb_avg_radius">Średni promień</v:String>
+    <v:String x:Key="tb_s">Kwadrat</v:String>
+    <v:String x:Key="tb_v">Tom</v:String>
+    <v:String x:Key="tb_m">Waga</v:String>
+    <v:String x:Key="tb_avg_dens">Średnia gęstość</v:String>
+    <v:String x:Key="tb_g">Przyspieszenie grawitacyjne</v:String>
+    <v:String x:Key="tb_v1">Pierwsza prędkość kosmiczna</v:String>
+    <v:String x:Key="tb_v2">Druga prędkość kosmiczna</v:String>
+    <v:String x:Key="l_open_web">Kliknięcie OK spowoduje otwarcie zewnętrznej przeglądarki. Czy chcesz kontynuować?</v:String>
+    <v:String x:Key="l_api_failed">Dostęp do serwera nie powiódł się. Twoje konto zostanie wylogowane. Zaloguj się ponownie.</v:String>
+
+    <!-- Settings window -->
+    <v:String x:Key="head_settings_window">EllipseSpace - Ustawienia</v:String>
+    <v:String x:Key="l_language">Język</v:String>
+    <v:String x:Key="l_language_explanation">Ustawienie języka programu.</v:String>
+    <v:String x:Key="l_timer_tick">Okres odnowienia</v:String>
+    <v:String x:Key="l_timer_tick_explanation">Zaznacz, aby zaktualizować tymczasowy katalog obiektów (w minutach).</v:String>
+    <v:String x:Key="b_save">Zapisz</v:String>
+    <v:String x:Key="l_invalid_settings">Wprowadziłeś nieprawidłową wartość dla jednego z pól.</v:String>
+    <v:String x:Key="l_version">Wersja </v:String>
+
+    <!-- Class App -->
+    <v:String x:Key="l_exception_1">Podczas działania programu wystąpił następujący błąd:</v:String>
+    <v:String x:Key="l_exception_2">Naciśnięcie dowolnego klawisza spowoduje zamknięcie programu.</v:String>
+</ResourceDictionary>

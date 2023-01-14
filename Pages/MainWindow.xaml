@@ -24,10 +24,10 @@
                 </Border.Effect>
 
                 <ListView x:Name="Menu" Foreground="#6610f2" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-                    <ListViewItem Height="60">
+                    <ListViewItem x:Name="ItemSettings" Height="60" Selected="ItemSettings_Selected">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="User" Height="25" Width="25" VerticalAlignment="Center"  Margin="10"/>
-                            <materialDesign:PackIcon Kind="Settings" Height="25" Width="25" VerticalAlignment="Center"  Margin="0 10 10 10"/>
+                            <materialDesign:PackIcon Kind="User" Height="25" Width="25" VerticalAlignment="Center" Margin="10"/>
+                            <materialDesign:PackIcon Kind="Settings" Height="25" Width="25" VerticalAlignment="Center" Margin="0 10 10 10"/>
                             <TextBlock x:Name="sessionNameLabel" Text="SessionName" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
@@ -35,31 +35,31 @@
                     <ListViewItem x:Name="ItemCatalogueObject" Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="ViewDashboard" Height="25" Width="25" Margin="10"/>
-                            <TextBlock Text="Каталог объектов" VerticalAlignment="Center" Margin="20 10"/>
+                            <TextBlock Text="{DynamicResource l_objects_catalogue}" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemAdminPanel" Height="60" Selected="ItemAdminPanel_Selected">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Administrator" Height="25" Width="25" Margin="10"/>
-                            <TextBlock Text="Панель администратора" VerticalAlignment="Center" Margin="20 10"/>
+                            <TextBlock Text="{DynamicResource l_admin_panel}" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem x:Name="ItemSupportProject" Height="60">
+                    <ListViewItem IsEnabled="False" x:Name="ItemSupportProject" Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Ticket" Height="25" Width="25" Margin="10"/>
-                            <TextBlock Text="Поддержать проект" VerticalAlignment="Center"  Margin="20 10"/>
+                            <TextBlock Text="{DynamicResource l_support_project}" VerticalAlignment="Center"  Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem x:Name="ItemContacts" Height="60">
+                    <ListViewItem IsEnabled="False" x:Name="ItemContacts" Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Message" Height="25" Width="25" Margin="10"/>
-                            <TextBlock Text="Связаться с нами" VerticalAlignment="Center"  Margin="20 10"/>
+                            <TextBlock Text="{DynamicResource l_contacts}" VerticalAlignment="Center"  Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemWeb" Height="60" Selected="ItemWeb_Selected">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Web" Height="25" Width="25" Margin="10"/>
-                            <TextBlock Text="Сайт" VerticalAlignment="Center" Margin="20 10"/>
+                            <TextBlock Text="{DynamicResource l_web}" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
                 </ListView>
@@ -80,9 +80,8 @@
 
                         <StackPanel Orientation="Vertical" Margin="15">
                             <StackPanel Orientation="Horizontal">
-                                <TextBox x:Name="searchTB" Style="{DynamicResource MaterialDesignFloatingHintTextBox}" Foreground="{DynamicResource MaterialDesignPaper}" TextChanged="searchTB_TextChanged">
-                                    <materialDesign:HintAssist.Hint>Поиск по имени...</materialDesign:HintAssist.Hint>
-                                </TextBox>
+                                <TextBox x:Name="searchTB" Style="{DynamicResource MaterialDesignFloatingHintTextBox}" Foreground="{DynamicResource MaterialDesignPaper}" TextChanged="searchTB_TextChanged" materialDesign:HintAssist.Hint="{DynamicResource tbx_find_by_name}"/>
+
                             </StackPanel>
                             <WrapPanel x:Name="catalogueObjectsList" Margin="10" Orientation="Horizontal">
 
@@ -100,7 +99,7 @@
                             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Orientation="Vertical" Margin="10">
                                 <TextBlock x:Name="objectNameTB" Style="{DynamicResource MaterialDesignHeadline4TextBlock}" Foreground="{DynamicResource MaterialDesignPaper}" Text="Object name"/>
                                 <StackPanel Orientation="Horizontal">
-                                    <TextBlock Style="{DynamicResource MaterialDesignHeadline6TextBlock}" Foreground="{DynamicResource MaterialDesignPaper}" Text="Дата открытия:" Margin="0 0 10 0"/>
+                                    <TextBlock Style="{DynamicResource MaterialDesignHeadline6TextBlock}" Foreground="{DynamicResource MaterialDesignPaper}" Text="{DynamicResource tb_opening_date}" Margin="0 0 10 0"/>
                                     <TextBlock x:Name="objectODateTimeTB" Style="{DynamicResource MaterialDesignHeadline6TextBlock}" Foreground="{DynamicResource MaterialDesignPaper}" Text="00.00.0000"/>
                                 </StackPanel>
                                 <TextBlock x:Name="objectDescriptionTB" Margin="0 20 0 0" TextWrapping="Wrap" Style="{DynamicResource MaterialDesignBody2TextBlock}" Foreground="{DynamicResource MaterialDesignPaper}" Text="Description of object."/>
@@ -131,49 +130,49 @@
                                         <RowDefinition/>
                                     </Grid.RowDefinitions>
 
-                                    <TextBlock Grid.Row="0" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="Сидерический период обращения"/>
+                                    <TextBlock Grid.Row="0" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="{DynamicResource tb_scp}"/>
                                     <TextBlock x:Name="objectSCoversionPeriodTB" Grid.Row="0" Grid.Column="1" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignPaper}"/>
 
-                                    <TextBlock Grid.Row="1" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="Орбитальная скорость"/>
+                                    <TextBlock Grid.Row="1" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="{DynamicResource tb_ovelocity}"/>
                                     <TextBlock x:Name="objectOrbitalVelTB" Grid.Row="1" Grid.Column="1" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignPaper}"/>
 
-                                    <TextBlock Grid.Row="2" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="Наклонение"/>
+                                    <TextBlock Grid.Row="2" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="{DynamicResource tb_inclination}"/>
                                     <TextBlock x:Name="objectInclinationTB" Grid.Row="2" Grid.Column="1" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignPaper}"/>
 
-                                    <TextBlock Grid.Row="3" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="Спутники"/>
+                                    <TextBlock Grid.Row="3" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="{DynamicResource tb_satelites}"/>
                                     <TextBlock x:Name="objectSatelitesTB" Grid.Row="3" Grid.Column="1" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignPaper}"/>
 
-                                    <TextBlock Grid.Row="4" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="Чей спутник"/>
+                                    <TextBlock Grid.Row="4" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="{DynamicResource tb_whose_satelite}"/>
                                     <TextBlock x:Name="objectWhoseSateliteTB" Grid.Row="4" Grid.Column="1" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignPaper}"/>
 
-                                    <TextBlock Grid.Row="5" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="Экваториальный радиус"/>
+                                    <TextBlock Grid.Row="5" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="{DynamicResource tb_eradius}"/>
                                     <TextBlock x:Name="objectEqRadiusTB" Grid.Row="5" Grid.Column="1" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignPaper}"/>
 
-                                    <TextBlock Grid.Row="6" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="Полярный радиус"/>
+                                    <TextBlock Grid.Row="6" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="{DynamicResource tb_pradius}"/>
                                     <TextBlock x:Name="objectPolarRadiusTB" Grid.Row="6" Grid.Column="1" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignPaper}"/>
 
-                                    <TextBlock Grid.Row="7" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="Средний радиус"/>
+                                    <TextBlock Grid.Row="7" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="{DynamicResource tb_avg_radius}"/>
                                     <TextBlock x:Name="objectAvgRadiusTB" Grid.Row="7" Grid.Column="1" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignPaper}"/>
 
-                                    <TextBlock Grid.Row="8" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="Площадь"/>
+                                    <TextBlock Grid.Row="8" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="{DynamicResource tb_s}"/>
                                     <TextBlock x:Name="objectSTB" Grid.Row="8" Grid.Column="1" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignPaper}"/>
 
-                                    <TextBlock Grid.Row="9" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="Объём"/>
+                                    <TextBlock Grid.Row="9" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="{DynamicResource tb_v}"/>
                                     <TextBlock x:Name="objectVTB" Grid.Row="9" Grid.Column="1" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignPaper}"/>
 
-                                    <TextBlock Grid.Row="10" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="Масса"/>
+                                    <TextBlock Grid.Row="10" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="{DynamicResource tb_m}"/>
                                     <TextBlock x:Name="objectMTB" Grid.Row="10" Grid.Column="1" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignPaper}"/>
 
-                                    <TextBlock Grid.Row="11" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="Средняя плотность"/>
+                                    <TextBlock Grid.Row="11" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="{DynamicResource tb_avg_dens}"/>
                                     <TextBlock x:Name="objectPTB" Grid.Row="11" Grid.Column="1" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignPaper}"/>
 
-                                    <TextBlock Grid.Row="12" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="Ускорение свободного падения"/>
+                                    <TextBlock Grid.Row="12" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="{DynamicResource tb_g}"/>
                                     <TextBlock x:Name="objectGTB" Grid.Row="12" Grid.Column="1" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignPaper}"/>
 
-                                    <TextBlock Grid.Row="13" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="Первая космическая скорость"/>
+                                    <TextBlock Grid.Row="13" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="{DynamicResource tb_v1}"/>
                                     <TextBlock x:Name="objectV1TB" Grid.Row="13" Grid.Column="1" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignPaper}"/>
 
-                                    <TextBlock Grid.Row="14" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="Вторая космическая скорость"/>
+                                    <TextBlock Grid.Row="14" Grid.Column="0" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignCheckBoxDisabled}" Text="{DynamicResource tb_v2}"/>
                                     <TextBlock x:Name="objectV2TB" Grid.Row="14" Grid.Column="1" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Foreground="{DynamicResource MaterialDesignPaper}"/>
                                 </Grid>
                             </StackPanel>

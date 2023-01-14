@@ -12,7 +12,7 @@
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
         mc:Ignorable="d"
-        Title="EllipseSpace - Вход" Height="450" Width="800" ResizeMode="NoResize">
+        Title="{DynamicResource head_authorization_window}" Height="450" Width="800" ResizeMode="NoResize">
     <Grid Background="#141414">
         <Border MinWidth="200" MaxWidth="770" Margin="30" Background="#222222" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="30" CornerRadius="10">
             <Border.Effect>
@@ -20,15 +20,15 @@
             </Border.Effect>
 
             <StackPanel>
-                <TextBlock Text="Добро пожаловать!" FontSize="30" FontWeight="DemiBold" Margin="0 0 0 2"/>
-                <TextBlock Text="Если вы не имеете аккаунта на EllipseSpace, воспользуйтесь кнопкой Регистрация" FontSize="15" FontWeight="ExtraLight" Margin="0 0 0 10"/>
+                <TextBlock Text="{DynamicResource l_welcome}" FontSize="30" FontWeight="DemiBold" Margin="0 0 0 2"/>
+                <TextBlock Text="{DynamicResource l_authorization_warning}" FontSize="15" FontWeight="ExtraLight" Margin="0 0 0 10"/>
 
-                <TextBox materialDesign:HintAssist.Hint="Логин" materialDesign:HintAssist.Foreground="{DynamicResource MaterialDesignPaper}" x:Name="sessionNameTB" Style="{DynamicResource MaterialDesignFloatingHintTextBox}" Margin="0 0 0 10"></TextBox>
-                <PasswordBox materialDesign:HintAssist.Hint="Пароль" materialDesign:HintAssist.Foreground="{DynamicResource MaterialDesignPaper}" x:Name="sessionPasswordTB" Style="{DynamicResource MaterialDesignFloatingHintPasswordBox}" Margin="0 0 0 10"></PasswordBox>
+                <TextBox materialDesign:HintAssist.Hint="{DynamicResource h_login}" materialDesign:HintAssist.Foreground="{DynamicResource MaterialDesignPaper}" x:Name="sessionNameTB" Style="{DynamicResource MaterialDesignFloatingHintTextBox}" Margin="0 0 0 10"></TextBox>
+                <PasswordBox materialDesign:HintAssist.Hint="{DynamicResource h_password}" materialDesign:HintAssist.Foreground="{DynamicResource MaterialDesignPaper}" x:Name="sessionPasswordTB" Style="{DynamicResource MaterialDesignFloatingHintPasswordBox}" Margin="0 0 0 10"></PasswordBox>
 
                 <Grid Margin="0 0 0 10">
-                    <Button x:Name="authButton" Click="authButton_Click" Style="{DynamicResource MaterialDesignFlatLightButton}" HorizontalAlignment="Left" Foreground="#6610f2">Вход</Button>
-                    <Button x:Name="regButton" Click="regButton_Click" HorizontalAlignment="Right" Background="#6610f2">Регистрация</Button>
+                    <Button x:Name="authButton" Click="authButton_Click" Style="{DynamicResource MaterialDesignFlatLightButton}" HorizontalAlignment="Left" Foreground="#6610f2" Content="{DynamicResource b_log_in}"/>
+                    <Button x:Name="regButton" Click="regButton_Click" HorizontalAlignment="Right" Background="#6610f2" Content="{DynamicResource b_registration}"/>
                 </Grid>
             </StackPanel>
         </Border>

@@ -24,7 +24,7 @@ namespace EllipseSpaceClient
 
             if(rSP != sessionPassword)
             {
-                new MessageWindow(MaterialDesignThemes.Wpf.PackIconKind.FaceConfusedOutline, "Пароли не совпадают").ShowDialog();
+                new MessageWindow(MaterialDesignThemes.Wpf.PackIconKind.FaceConfusedOutline, Application.Current.Resources["l_passwords_not_match"].ToString()).ShowDialog();
                 return;
             }
 
@@ -39,7 +39,7 @@ namespace EllipseSpaceClient
                 configuration.Id = Convert.ToInt32(id);
                 configuration.Save();
 
-                new MessageWindow(MaterialDesignThemes.Wpf.PackIconKind.FaceExcitedOutline, "Аккаунт зарегестрирован. Чтобы войти в него, вернитесь в предыдущее окно.").ShowDialog();
+                new MessageWindow(MaterialDesignThemes.Wpf.PackIconKind.FaceExcitedOutline, Application.Current.Resources["l_account_registred"].ToString()).ShowDialog();
             }
             else
                 new MessageWindow(MaterialDesignThemes.Wpf.PackIconKind.EmojiSadOutline, ServerStatus.Unmarshal(idResp.Content.ReadAsStringAsync().Result).Message);

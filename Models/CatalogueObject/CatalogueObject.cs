@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace EllipseSpaceClient.Models.CatalogueObject
 {
-	public class CatologueObject
+	public class CatalogueObject
     {
 		// Название спутника
 		[JsonPropertyName("name")]
@@ -63,7 +63,7 @@ namespace EllipseSpaceClient.Models.CatalogueObject
 		[JsonPropertyName("photos")]
 		public string[] Photos { get; set; }
 
-		public CatologueObject()
+		public CatalogueObject()
 		{
 
 		}
@@ -73,14 +73,14 @@ namespace EllipseSpaceClient.Models.CatalogueObject
 			return JsonSerializer.Serialize(this);
 		}
 
-		internal static CatologueObject? Unmarshal(string json)
+		internal static CatalogueObject? Unmarshal(string json)
 		{
-			return JsonSerializer.Deserialize<CatologueObject>(json);
+			return JsonSerializer.Deserialize<CatalogueObject>(json);
 		}
 
-		internal static CatologueObject[]? UnmarshalArray(string json)
+		internal static CatalogueObject[]? UnmarshalArray(string json)
 		{
-			return JsonSerializer.Deserialize<CatologueObject[]>(json);
+			return JsonSerializer.Deserialize<CatalogueObject[]>(json);
 		}
     }
 }

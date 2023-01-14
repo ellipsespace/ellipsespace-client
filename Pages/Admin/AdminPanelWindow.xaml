@@ -26,13 +26,33 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <ListView x:Name="objectsLV" Grid.Column="0">
+                <ListView x:Name="objectsLV" Grid.Column="0" SelectionChanged="objectsLV_SelectionChanged">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn DisplayMemberBinding="{Binding Path=Name}">Название</GridViewColumn>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Header="Название"/>
                         </GridView>
                     </ListView.View>
                 </ListView>
+
+                <StackPanel Orientation="Vertical" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="1">
+                    <Button x:Name="createObjectButton" Click="createObjectButton_Click" Foreground="#6610f2" Style="{DynamicResource MaterialDesignFlatLightButton}">
+                        <Button.Content>
+                            <materialDesign:PackIcon Kind="CreateOutline" Width="25" Height="25"/>
+                        </Button.Content>
+                    </Button>
+
+                    <Button x:Name="updateObjectButton" Click="updateObjectButton_Click" IsEnabled="False" Foreground="#6610f2" Style="{DynamicResource MaterialDesignFlatLightButton}">
+                        <Button.Content>
+                            <materialDesign:PackIcon Kind="Update" Width="25" Height="25"/>
+                        </Button.Content>
+                    </Button>
+
+                    <Button x:Name="deleteObjectButton" Click="deleteObjectButton_Click" IsEnabled="False" Foreground="#6610f2" Style="{DynamicResource MaterialDesignFlatLightButton}">
+                        <Button.Content>
+                            <materialDesign:PackIcon Kind="DeleteOutline" Width="25" Height="25"/>
+                        </Button.Content>
+                    </Button>
+                </StackPanel>
             </Grid>
         </Border>
     </Grid>

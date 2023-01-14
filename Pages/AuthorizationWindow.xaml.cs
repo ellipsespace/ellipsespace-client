@@ -35,7 +35,7 @@ namespace EllipseSpaceClient
 
             if (!jwt.Contains(" "))
             {
-                Configuration.UpdateInfo(jwt);
+                Configuration.UpdateSessionInfo(jwt);
                 OpenMainWindow();
             }
             else

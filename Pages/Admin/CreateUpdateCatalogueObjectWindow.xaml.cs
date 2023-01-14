@@ -17,18 +17,18 @@ namespace EllipseSpaceClient.Pages.Admin
     {
         private readonly EditType Type;
 
-        public CreateUpdateCatalogueObjectWindow(CatologueObject? objectToUpdate = null)
+        public CreateUpdateCatalogueObjectWindow(CatalogueObject? objectToUpdate = null)
         {
             InitializeComponent();
 
             if (objectToUpdate != null)
             {
-                catalogueObjectDG.ItemsSource = new CatologueObject[1] { objectToUpdate };
+                catalogueObjectDG.ItemsSource = new CatalogueObject[1] { objectToUpdate };
                 Type = EditType.Update;
             }
             else
             {
-                catalogueObjectDG.ItemsSource = new CatologueObject[1] { new CatologueObject() };
+                catalogueObjectDG.ItemsSource = new CatalogueObject[1] { new CatalogueObject() };
                 Type = EditType.Create;
             }
         }
@@ -36,15 +36,15 @@ namespace EllipseSpaceClient.Pages.Admin
         private void saveButton_Click(object sender, RoutedEventArgs e)
         {
             if (Type == EditType.Create)
-                CreateUpdateObject("/add-object-catologue", HttpMethod.Post, "Объект успешно добавлен.");
+                CreateUpdateObject("/catalogue/add", HttpMethod.Post, "Объект успешно добавлен.");
             else
-                CreateUpdateObject("/update-object-catologue", HttpMethod.Put, "Даннные об объекте обновлены.");
+                CreateUpdateObject("/catalogue/update", HttpMethod.Put, "Даннные об объекте обновлены.");
         }
 
         private void CreateUpdateObject(string relative, HttpMethod method, string message)
         {
-            var resp = new API(Configuration.Create().JwtToken).SendRequest(API.MakeAddress("/add-object-catologue"), method, true,
-                    ((CatologueObject)(catalogueObjectDG.Items[0])).Marshal());
+            var resp = new API(Configuration.Create().JwtToken).SendRequest(API.MakeAddress(relative), method, true,
+                    ((CatalogueObject)(catalogueObjectDG.Items[0])).Marshal());
 
             if (resp.IsSuccessStatusCode)
                 new MessageWindow(MaterialDesignThemes.Wpf.PackIconKind.SuccessCircleOutline, message);

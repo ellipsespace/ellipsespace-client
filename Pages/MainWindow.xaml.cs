@@ -7,13 +7,15 @@ using System.Net.Http;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Threading;
 using EllipseSpaceClient.Core.CatologueObjectRepository;
 using EllipseSpaceClient.Core.Configuration;
 using EllipseSpaceClient.Core.EllipseSpaceAPI;
+using EllipseSpaceClient.Core.Version;
 using EllipseSpaceClient.Models.CatalogueObject;
 using EllipseSpaceClient.Pages.Admin;
+using Version = EllipseSpaceClient.Core.Version.Version;
 
 namespace EllipseSpaceClient.Pages
 {
@@ -21,14 +23,35 @@ namespace EllipseSpaceClient.Pages
     {
         private Button CatalogueObjectButtonSample;
         private API API;
+        private DispatcherTimer Timer;
 
         public MainWindow()
         {
             InitializeComponent();
 
+            var tag = GitAPI.GetLatestTag();
+            var serverVersion = new Version(tag);
+            var localVersion = Version.Local();
+
+            if (serverVersion > localVersion && new MessageWindow(MaterialDesignThemes.Wpf.PackIconKind.Update,
+                $"{Application.Current.Resources["l_new_version_1"]} {serverVersion} {Application.Current.Resources["l_new_version_2"]}").ShowDialog() == true)
+            {
+                if (File.Exists(App.UPDATE_FILE_NAME))
+                    File.Delete(App.UPDATE_FILE_NAME);
+
+                new WebClient().DownloadFileAsync(new Uri(GitAPI.MakeAddress("ellipsespace/ellipsespace-client/releases/latest/download/upd.zip")), App.UPDATE_FILE_NAME);
+
+                new MessageWindow(MaterialDesignThemes.Wpf.PackIconKind.Update, Application.Current.Resources["l_update_downloaded"].ToString()).ShowDialog();
+
+                if (File.Exists(App.UPDATE_MODULE_NAME))
+                    Process.Start(App.UPDATE_MODULE_NAME, App.UPDATE_FILE_NAME.Split(' '));
+
+                Application.Current.Shutdown();
+            }
+
             var configuration = Configuration.Create();
             string jwt = configuration.JwtToken;
-            Configuration.UpdateInfo(jwt);
+            Configuration.UpdateSessionInfo(jwt);
             configuration = Configuration.Create();
 
             sessionNameLabel.Text = configuration.SessionName;
@@ -40,24 +63,33 @@ namespace EllipseSpaceClient.Pages
 
             CatalogueObjectButtonSample = new Button();
 
-            var resp = API.SendRequest(API.MakeAddress("/get-all-object-catalogue"), HttpMethod.Get, true);
-            CatologueObjectRepository.Repository = CatologueObject.UnmarshalArray(resp.Content.ReadAsStringAsync().Result).ToList();
+            UpdateLocalRepository();
 
-            if (CatologueObjectRepository.Repository != null)
-                FillObjectCatalogueList(CatologueObjectRepository.Repository.ToArray());
+            if(CatalogueObjectRepository.Repository != null)
+                FillObjectCatalogueList(CatalogueObjectRepository.Repository.ToArray());
             else
             {
-                var dr = new MessageWindow(MaterialDesignThemes.Wpf.PackIconKind.WebOff, "При попытке получения объектов возникла ошибка.").ShowDialog();
-                if (dr == true || dr == false)
-                    Application.Current.Shutdown();
+                new MessageWindow(MaterialDesignThemes.Wpf.PackIconKind.WebOff, Application.Current.Resources["l_api_failed"].ToString()).ShowDialog();
+                Configuration.Logout();
+                Application.Current.Shutdown();
             }
+
+            Timer = new DispatcherTimer();
+            Timer.Tick += Timer_Tick;
+            SetTimer(new TimeSpan(0, configuration.Tick, 0));
+        }
+
+        private void Timer_Tick(object? sender, EventArgs e)
+        {
+            if(Timer.Interval != TimeSpan.Zero)
+            UpdateLocalRepository();
         }
 
         private void searchTB_TextChanged(object sender, TextChangedEventArgs e)
         {
             string entred = ((TextBox)sender).Text;
 
-            var finded = CatologueObjectRepository.Repository.Where(obj => obj.Name.Contains(entred));
+            var finded = CatalogueObjectRepository.Repository.Where(obj => obj.Name.Contains(entred));
             FillObjectCatalogueList(finded.ToArray());
         }
 
@@ -65,7 +97,7 @@ namespace EllipseSpaceClient.Pages
         {
             string name = ((Button)sender).Content.ToString();
 
-            var obj = CatologueObjectRepository.Repository.Where(obj => obj.Name == name).ToArray()[0];
+            var obj = CatalogueObjectRepository.Repository.Where(obj => obj.Name == name).ToArray()[0];
 
             if(obj != null)
             {
@@ -104,6 +136,19 @@ namespace EllipseSpaceClient.Pages
             objectInfoBorder.Visibility = Visibility.Visible;
         }
 
+        private void ItemSettings_Selected(object sender, RoutedEventArgs e)
+        {
+            var window = new SettingsWindow();
+            bool success = (bool)window.ShowDialog();
+
+            if(success)
+            {
+                var pref = window.GetPreferences();
+                App.Language = pref.Item1;
+                SetTimer(new TimeSpan(0, pref.Item2, 0));
+            }
+        }
+
         private void ItemAdminPanel_Selected(object sender, RoutedEventArgs e)
         {
             var adminPanelWindow = new AdminPanelWindow();
@@ -113,7 +158,7 @@ namespace EllipseSpaceClient.Pages
 
         private void ItemWeb_Selected(object sender, RoutedEventArgs e)
         {
-            if (new MessageWindow(MaterialDesignThemes.Wpf.PackIconKind.AsteriskCircleOutline, "Нажатие на кнопку ОК приведет к открытию внешнего браузера. Вы хотите продолжить?")
+            if (new MessageWindow(MaterialDesignThemes.Wpf.PackIconKind.AsteriskCircleOutline, Application.Current.Resources["l_open_web"].ToString())
                 .ShowDialog() == true)
             OpenUrl("https://ellipsespace.onrender.com/");
         }
@@ -146,17 +191,31 @@ namespace EllipseSpaceClient.Pages
             }
         }
 
-        private void FillObjectCatalogueList(CatologueObject[] dataSourse)
+        private void FillObjectCatalogueList(CatalogueObject[] dataSourse)
         {
             catalogueObjectsList.Children.Clear();
 
             foreach (var obj in dataSourse)
             {
                 var button = CatalogueObjectButtonSample;
+                button.Name = $"{obj.Name}Button";
                 button.Content = obj.Name;
                 button.Click += ObjectButton_Click;
                 catalogueObjectsList.Children.Add(button);
             }
+        }
+
+        private void SetTimer(TimeSpan tick)
+        {
+            Timer.Stop();
+            Timer.Interval = tick;
+            Timer.Start();
+        }
+
+        private void UpdateLocalRepository()
+        {
+            var resp = API.SendRequest(API.MakeAddress("/catalogue/all"), HttpMethod.Get, true);
+            CatalogueObjectRepository.Repository = CatalogueObject.UnmarshalArray(resp.Content.ReadAsStringAsync().Result).ToList();
         }
     }
 }

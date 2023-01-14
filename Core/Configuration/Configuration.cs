@@ -19,10 +19,15 @@ namespace EllipseSpaceClient.Core.Configuration
         public string SessionName { get; set; }
 
         [JsonPropertyName("access-level")]
-        public int AccessLevel { get; set; } 
+        public int AccessLevel { get; set; }
 
         [JsonPropertyName("jwt")]
         public string JwtToken { get; set; }
+
+        [JsonPropertyName("lang")]
+        public string DefaultLanguage { get; set; }
+        [JsonPropertyName("tick")]
+        public int Tick { get; set; }
 
         public Configuration()
         {
@@ -51,7 +56,7 @@ namespace EllipseSpaceClient.Core.Configuration
             else return null;
         }
 
-        internal static void UpdateInfo(string jwt)
+        internal static void UpdateSessionInfo(string jwt)
         {
             var API = new API();
             API.ApiKey = jwt;
@@ -63,6 +68,12 @@ namespace EllipseSpaceClient.Core.Configuration
             configuration.Id = info.Id;
             configuration.SessionName = info.SessionName;
             configuration.AccessLevel = info.AccessLevel;
+            configuration.Save();
+        }
+
+        internal static void Logout()
+        {
+            var configuration = new Configuration();
             configuration.Save();
         }
 

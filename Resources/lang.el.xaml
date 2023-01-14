@@ -1,0 +1,68 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+
+    <!-- Authorization window -->
+    <v:String x:Key="head_authorization_window">EllipseSpace - Είσοδος</v:String>
+    <v:String x:Key="l_welcome">Καλώς ήρθατε!</v:String>
+    <v:String x:Key="l_authorization_warning">Αν δεν έχετε λογαριασμό στο EllipseSpace, χρησιμοποιήστε το κουμπί Εγγραφή.</v:String>
+    <v:String x:Key="h_login">Σύνδεση</v:String>
+    <v:String x:Key="h_password">Κωδικός πρόσβασης</v:String>
+    <v:String x:Key="b_log_in">Συνδεθείτε</v:String>
+    <v:String x:Key="b_registration">Εγγραφή</v:String>
+    <v:String x:Key="l_new_version_1">Ανακαλύφθηκε μια νέα έκδοση του προγράμματος-πελάτη: </v:String>
+    <v:String x:Key="l_new_version_2">. Αν θέλετε να το εγκαταστήσετε, κάντε κλικ στο OK.</v:String>
+    <v:String x:Key="l_update_downloaded">Η λήψη του αρχείου ενημέρωσης ολοκληρώθηκε με επιτυχία. Μια εξωτερική μονάδα θα εκτελεστεί για την εγκατάστασή του. Εάν δεν διαθέτετε εξωτερικό πρόγραμμα ενημέρωσης, απλά αποσυμπιέστε τα περιεχόμενα του αρχείου zip στο φάκελο του προγράμματος.</v:String>
+
+    <!-- Registration window -->
+    <v:String x:Key="head_registration_window">EllipseSpace - Εγγραφή</v:String>
+    <v:String x:Key="l_registration_warning">Αν έχετε ήδη λογαριασμό στο EllipseSpace, χρησιμοποιήστε το προηγούμενο παράθυρο</v:String>
+    <v:String x:Key="h_password_repeat">Κωδικός πρόσβασης (επανάληψη)</v:String>
+    <v:String x:Key="l_passwords_not_match">Οι κωδικοί πρόσβασης δεν ταιριάζουν.</v:String>
+    <v:String x:Key="l_account_registred">Ο λογαριασμός είναι καταχωρημένος. Για να συνδεθείτε, επιστρέψτε στο προηγούμενο παράθυρο.</v:String>
+
+    <!-- Message window -->
+    <v:String x:Key="b_okay">Εντάξει</v:String>
+    <v:String x:Key="b_close">Κλείσιμο</v:String>
+
+    <!-- Main window -->
+    <v:String x:Key="l_objects_catalogue">Κατάλογος αντικειμένων</v:String>
+    <v:String x:Key="l_admin_panel">Πίνακας διαχειριστή</v:String>
+    <v:String x:Key="l_support_project">Υποστήριξη του έργου</v:String>
+    <v:String x:Key="l_contacts">Επικοινωνήστε μαζί μας</v:String>
+    <v:String x:Key="l_web">Ιστοσελίδα</v:String>
+    <v:String x:Key="tbx_find_by_name">Αναζήτηση με όνομα...</v:String>
+    <v:String x:Key="tb_opening_date">Ημερομηνία έναρξης:</v:String>
+    <v:String x:Key="tb_scp">Περίοδος μετατροπής του Σίδερου</v:String>
+    <v:String x:Key="tb_ovelocity">Ταχύτητα τροχιάς</v:String>
+    <v:String x:Key="tb_inclination">Κλίση</v:String>
+    <v:String x:Key="tb_satelites">Δορυφόροι</v:String>
+    <v:String x:Key="tb_whose_satelite">Ποιανού δορυφόρου</v:String>
+    <v:String x:Key="tb_eradius">Ισημερινή ακτίνα</v:String>
+    <v:String x:Key="tb_pradius">Πολική ακτίνα</v:String>
+    <v:String x:Key="tb_avg_radius">Μέση ακτίνα</v:String>
+    <v:String x:Key="tb_s">Τετράγωνο</v:String>
+    <v:String x:Key="tb_v">Τόμος</v:String>
+    <v:String x:Key="tb_m">Βάρος</v:String>
+    <v:String x:Key="tb_avg_dens">Μέση πυκνότητα</v:String>
+    <v:String x:Key="tb_g">Επιτάχυνση της βαρύτητας</v:String>
+    <v:String x:Key="tb_v1">Πρώτη διαστημική ταχύτητα</v:String>
+    <v:String x:Key="tb_v2">Δεύτερη διαστημική ταχύτητα</v:String>
+    <v:String x:Key="l_open_web">Κάνοντας κλικ στο OK θα ανοίξει το εξωτερικό πρόγραμμα περιήγησης. Θέλετε να συνεχίσετε;</v:String>
+    <v:String x:Key="l_api_failed">Η πρόσβαση στο διακομιστή ήταν ανεπιτυχής. Ο λογαριασμός σας θα αποσυνδεθεί. Συνδεθείτε ξανά.</v:String>
+
+    <!-- Settings window -->
+    <v:String x:Key="head_settings_window">EllipseSpace - Ρυθμίσεις</v:String>
+    <v:String x:Key="l_language">Γλώσσα</v:String>
+    <v:String x:Key="l_language_explanation">Ρύθμιση της γλώσσας του προγράμματος.</v:String>
+    <v:String x:Key="l_timer_tick">Ενημέρωση τσιμπούρι</v:String>
+    <v:String x:Key="l_timer_tick_explanation">Επιλέξτε για να ενημερώσετε τον προσωρινό κατάλογο αντικειμένων (σε λεπτά).</v:String>
+    <v:String x:Key="b_save">Αποθήκευση</v:String>
+    <v:String x:Key="l_invalid_settings">Εισάγατε μη έγκυρη τιμή για ένα από τα πεδία.</v:String>
+    <v:String x:Key="l_version">Έκδοση </v:String>
+
+    <!-- Class App -->
+    <v:String x:Key="l_exception_1">Εμφανίστηκε το ακόλουθο σφάλμα κατά την εκτέλεση του προγράμματος:</v:String>
+    <v:String x:Key="l_exception_2">Το πάτημα οποιουδήποτε πλήκτρου θα κλείσει το πρόγραμμα.</v:String>
+
+</ResourceDictionary>

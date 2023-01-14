@@ -1,0 +1,68 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    
+    <!-- Authorization window -->
+    <v:String x:Key="head_authorization_window">EllipseSpace - Вход</v:String>
+    <v:String x:Key="l_welcome">Добро пожаловать!</v:String>
+    <v:String x:Key="l_authorization_warning">Если вы не имеете аккаунта на EllipseSpace, воспользуйтесь кнопкой Регистрация</v:String>
+    <v:String x:Key="h_login">Логин</v:String>
+    <v:String x:Key="h_password">Пароль</v:String>
+    <v:String x:Key="b_log_in">Войти</v:String>
+    <v:String x:Key="b_registration">Регистрация</v:String>
+    <v:String x:Key="l_new_version_1">Обнаружена новая версия клиента: </v:String>
+    <v:String x:Key="l_new_version_2">. Если вы хотите установить ее, нажмите ОК.</v:String>
+    <v:String x:Key="l_update_downloaded">Файл обновления был успешно загружен. Для его установки будет запущен внешний модуль. Если у вас отсутствует внешний модуль обновлений, просто распакуйте содержимое zip-файла в папке программы.</v:String>
+
+    <!-- Registration window -->
+    <v:String x:Key="head_registration_window">EllipseSpace - Регистрация</v:String>
+    <v:String x:Key="l_registration_warning">Если у вас уже есть аккаунт на EllipseSpace, воспользуйтесь предыдущим окном</v:String>
+    <v:String x:Key="h_password_repeat">Пароль (повторно)</v:String>
+    <v:String x:Key="l_passwords_not_match">Пароли не совпадают.</v:String>
+    <v:String x:Key="l_account_registred">Аккаунт зарегестрирован. Чтобы войти в него, вернитесь в предыдущее окно.</v:String>
+
+    <!-- Message window -->
+    <v:String x:Key="b_okay">ОК</v:String>
+    <v:String x:Key="b_close">Закрыть</v:String>
+
+    <!-- Main window -->
+    <v:String x:Key="l_objects_catalogue">Каталог объектов</v:String>
+    <v:String x:Key="l_admin_panel">Панель администратора</v:String>
+    <v:String x:Key="l_support_project">Поддержать проект</v:String>
+    <v:String x:Key="l_contacts">Связаться с нами</v:String>
+    <v:String x:Key="l_web">Сайт</v:String>
+    <v:String x:Key="tbx_find_by_name">Поиск по имени...</v:String>
+    <v:String x:Key="tb_opening_date">Дата открытия:</v:String>
+    <v:String x:Key="tb_scp">Сидерический период обращения</v:String>
+    <v:String x:Key="tb_ovelocity">Орбитальная скорость</v:String>
+    <v:String x:Key="tb_inclination">Наклонение</v:String>
+    <v:String x:Key="tb_satelites">Спутники</v:String>
+    <v:String x:Key="tb_whose_satelite">Чей спутник</v:String>
+    <v:String x:Key="tb_eradius">Экваториальный радиус</v:String>
+    <v:String x:Key="tb_pradius">Полярный радиус</v:String>
+    <v:String x:Key="tb_avg_radius">Средний радиу</v:String>
+    <v:String x:Key="tb_s">Площадь</v:String>
+    <v:String x:Key="tb_v">Объем</v:String>
+    <v:String x:Key="tb_m">Масса</v:String>
+    <v:String x:Key="tb_avg_dens">Средняя плотность</v:String>
+    <v:String x:Key="tb_g">Ускорение свободного падения</v:String>
+    <v:String x:Key="tb_v1">Первая космическая скорость</v:String>
+    <v:String x:Key="tb_v2">Вторая космическая скорость</v:String>
+    <v:String x:Key="l_open_web">Нажатие на кнопку ОК повлечет за собой открытие внешнего бразуера. Вы уверены, что хотите продолжить?</v:String>
+    <v:String x:Key="l_api_failed">Обращение к серверу оказалось неуспешным. Будет произведен выход из вашего аккаунта. Авторизуйтесь повторно.</v:String>
+
+    <!-- Settings window -->
+    <v:String x:Key="head_settings_window">EllipseSpace - Настройки</v:String>
+    <v:String x:Key="l_language">Язык</v:String>
+    <v:String x:Key="l_language_explanation">Установка языка программы.</v:String>
+    <v:String x:Key="l_timer_tick">Тик обновления</v:String>
+    <v:String x:Key="l_timer_tick_explanation">Период обновления временного каталога объектов (в минутах).</v:String>
+    <v:String x:Key="b_save">Сохранить</v:String>
+    <v:String x:Key="l_invalid_settings">Вы указали недопустимое значение для одного из полей.</v:String>
+    <v:String x:Key="l_version">Версия </v:String>
+
+    <!-- Class App -->
+    <v:String x:Key="l_exception_1">В ходе работы программы возникла следующая ошибка:</v:String>
+    <v:String x:Key="l_exception_2">Нажатие на любую клавишу приведет к закрытию программы.</v:String>
+
+</ResourceDictionary>

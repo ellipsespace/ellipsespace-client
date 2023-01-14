@@ -17,11 +17,11 @@
         <StackPanel Orientation="Vertical">
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
                 <materialDesign:PackIcon x:Name="icon" Width="30" Height="30"/>
-                <TextBlock x:Name="messageTB" Margin="10 0 0 0" VerticalAlignment="Center" Style="{DynamicResource MaterialDesignHelperTextBlock}">Здесь будет текст уведомления...</TextBlock>
+                <TextBlock x:Name="messageTB" Margin="10 0 0 0" VerticalAlignment="Center" Style="{DynamicResource MaterialDesignHelperTextBlock}">Here will be the text of the notice...</TextBlock>
             </StackPanel>
             <Grid HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="250">
-                <Button x:Name="okButton" Click="okButton_Click" Style="{DynamicResource MaterialDesignFlatLightButton}" HorizontalAlignment="Left" Foreground="#6610f2">ОК</Button>
-                <Button x:Name="closeButton" Click="closeButton_Click" Style="{DynamicResource MaterialDesignFlatLightButton}" HorizontalAlignment="Right" Foreground="#6610f2">Закрыть</Button>
+                <Button x:Name="okButton" Click="okButton_Click" Style="{DynamicResource MaterialDesignFlatLightButton}" HorizontalAlignment="Left" Foreground="#6610f2" Content="{DynamicResource b_okay}"/>
+                <Button x:Name="closeButton" Click="closeButton_Click" Style="{DynamicResource MaterialDesignFlatLightButton}" HorizontalAlignment="Right" Foreground="#6610f2" Content="{DynamicResource b_close}"/> 
             </Grid>
         </StackPanel>
     </Grid>

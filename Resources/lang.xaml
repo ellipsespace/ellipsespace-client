@@ -1,0 +1,81 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    
+    <!--
+        USED PREFIXES IN THE NAME OF RESOURCES:
+    
+        l - label
+        head - title of the window
+        h - hint
+        b - button
+        tb - textblock
+        tbx - textbox
+    
+        ALL TRANSLATIONS ARE MADE WITH THE DEEPL RESOURCE
+    -->
+    
+    <!-- Authorization window -->
+    <v:String x:Key="head_authorization_window">EllipseSpace - Log in</v:String>
+    <v:String x:Key="l_welcome">Welcome!</v:String>
+    <v:String x:Key="l_authorization_warning">If you do not have an EllipseSpace account, use the Register button</v:String>
+    <v:String x:Key="h_login">Login</v:String>
+    <v:String x:Key="h_password">Password</v:String>
+    <v:String x:Key="b_log_in">Log in</v:String>
+    <v:String x:Key="b_registration">Registration</v:String>
+    <v:String x:Key="l_new_version_1">A new version of the client was discovered: </v:String>
+    <v:String x:Key="l_new_version_2">. If you want to install it, click OK.</v:String>
+    <v:String x:Key="l_update_downloaded">The update file was successfully downloaded. An external module will be run to install it. If you do not have an external updater, simply unzip the contents of the zip file into the program folder.</v:String>
+
+    <!-- Registration window -->
+    <v:String x:Key="head_registration_window">EllipseSpace - Registration</v:String>
+    <v:String x:Key="l_registration_warning">If you already have an EllipseSpace account, use the previous window</v:String>
+    <v:String x:Key="h_password_repeat">Password (repeat)</v:String>
+    <v:String x:Key="l_passwords_not_match">The passwords don't match.</v:String>
+    <v:String x:Key="l_account_registred">The account is registered. To log in, go back to the previous window.</v:String>
+
+    <!-- Message window -->
+    <v:String x:Key="b_okay">Okay</v:String>
+    <v:String x:Key="b_close">Close</v:String>
+
+    <!-- Main window -->
+    <v:String x:Key="l_objects_catalogue">Objects catalogue</v:String>
+    <v:String x:Key="l_admin_panel">Admin panel</v:String>
+    <v:String x:Key="l_support_project">Support the project</v:String>
+    <v:String x:Key="l_contacts">Contact us</v:String>
+    <v:String x:Key="l_web">Site</v:String>
+    <v:String x:Key="tbx_find_by_name">Search by name...</v:String>
+    <v:String x:Key="tb_opening_date">Opening date:</v:String>
+    <v:String x:Key="tb_scp">Sideric conversion period</v:String>
+    <v:String x:Key="tb_ovelocity">Orbital velocity</v:String>
+    <v:String x:Key="tb_inclination">Inclination</v:String>
+    <v:String x:Key="tb_satelites">Satelites</v:String>
+    <v:String x:Key="tb_whose_satelite">Whose satelite</v:String>
+    <v:String x:Key="tb_eradius">Equatorial radius</v:String>
+    <v:String x:Key="tb_pradius">Polar radius</v:String>
+    <v:String x:Key="tb_avg_radius">Average radius</v:String>
+    <v:String x:Key="tb_s">Square</v:String>
+    <v:String x:Key="tb_v">Volume</v:String>
+    <v:String x:Key="tb_m">Weight</v:String>
+    <v:String x:Key="tb_avg_dens">Average density</v:String>
+    <v:String x:Key="tb_g">Gravity acceleration</v:String>
+    <v:String x:Key="tb_v1">1st space velocity</v:String>
+    <v:String x:Key="tb_v2">2nd space velocity</v:String>
+    <v:String x:Key="l_open_web">Clicking OK will open the external browser. Do you want to continue?</v:String>
+    <v:String x:Key="l_api_failed">Access to the server was unsuccessful. Your account will be logged out. Log in again.</v:String>
+
+    <!-- Settings window -->
+    <v:String x:Key="head_settings_window">EllipseSpace - Settings</v:String>
+    <v:String x:Key="l_language">Language</v:String>
+    <v:String x:Key="l_language_explanation">Setting the program language.</v:String>
+    <v:String x:Key="l_timer_tick">Update tick</v:String>
+    <v:String x:Key="l_timer_tick_explanation">Tick to update the temporary catalog of objects (in minutes).</v:String>
+    <v:String x:Key="b_save">Save</v:String>
+    <v:String x:Key="l_invalid_settings">You entered an invalid value for one of the fields.</v:String>
+    <v:String x:Key="l_version">Version </v:String>
+
+    <!-- Class App -->
+    <v:String x:Key="l_exception_1">The following error occurred while the program was running:</v:String>
+    <v:String x:Key="l_exception_2">Pressing any key will close the program.</v:String>
+
+</ResourceDictionary>
