@@ -17,7 +17,8 @@ namespace EllipseSpaceClient
             { "en-US", "English (American)" },
             { "ru-RU", "Русский" },
             { "el", "Ελληνικά" },
-            { "pl-PL", "Polska" }
+            { "pl-PL", "Polska" },
+            { "bg-BG", "Български" }
         };
         public static event EventHandler LanguageChanged;
 
@@ -89,6 +90,7 @@ namespace EllipseSpaceClient
             languages.Add(new CultureInfo("ru-RU"));
             languages.Add(new CultureInfo("el"));
             languages.Add(new CultureInfo("pl-PL"));
+            languages.Add(new CultureInfo("bg-BG"));
 
             LanguageChanged += App_LanguageChanged;
             Language = CultureInfo.GetCultureInfo(Configuration.Create().DefaultLanguage);

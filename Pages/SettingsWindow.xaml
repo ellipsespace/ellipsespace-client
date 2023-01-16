@@ -44,7 +44,7 @@
 
                     <StackPanel Grid.Column="0" Orientation="Vertical">
                         <TextBlock Style="{DynamicResource MaterialDesignSubtitle1TextBlock}" Foreground="{DynamicResource MaterialDesignPaper}" Text="{DynamicResource l_timer_tick}"/>
-                        <TextBlock Style="{DynamicResource MaterialDesignOverlineTextBlock}" Foreground="DarkGray" Text="{DynamicResource l_timer_tick_explanation}"/>
+                        <TextBlock Style="{DynamicResource MaterialDesignOverlineTextBlock}" Width="Auto" TextWrapping="Wrap" Foreground="DarkGray" Text="{DynamicResource l_timer_tick_explanation}"/>
                     </StackPanel>
 
                     <ComboBox x:Name="updateTickCB" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Style="{DynamicResource MaterialDesignComboBox}">

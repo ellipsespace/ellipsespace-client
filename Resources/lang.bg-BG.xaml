@@ -1,0 +1,80 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+
+    <!-- Authorization window -->
+    <v:String x:Key="head_authorization_window">EllipseSpace - Влезте в системата</v:String>
+    <v:String x:Key="l_welcome">Добре дошли!</v:String>
+    <v:String x:Key="l_authorization_warning">Ако нямате акаунт в EllipseSpace, използвайте бутона Регистрация</v:String>
+    <v:String x:Key="h_login">Вход</v:String>
+    <v:String x:Key="h_password">Парола</v:String>
+    <v:String x:Key="b_log_in">Влезте в системата</v:String>
+    <v:String x:Key="b_registration">Регистрация</v:String>
+    <v:String x:Key="l_new_version_1">Открита е нова версия на клиента:</v:String>
+    <v:String x:Key="l_new_version_2">. Ако искате да го инсталирате, щракнете върху Добре.</v:String>
+    <v:String x:Key="l_update_downloaded">Файлът с актуализацията е изтеглен успешно. Ще бъде стартиран външен модул за инсталирането му. Ако не разполагате с външен модул за актуализация, просто разархивирайте съдържанието на zip файла в папката на програмата.</v:String>
+
+    <!-- Registration window -->
+    <v:String x:Key="head_registration_window">EllipseSpace - Регистрация</v:String>
+    <v:String x:Key="l_registration_warning">Ако вече имате акаунт в EllipseSpace, използвайте предишния прозорец</v:String>
+    <v:String x:Key="h_password_repeat">Парола (повторение)</v:String>
+    <v:String x:Key="l_passwords_not_match">Паролите не съвпадат.</v:String>
+    <v:String x:Key="l_account_registred">Акаунтът е регистриран. За да влезете, върнете се към предишния прозорец.</v:String>
+
+    <!-- Message window -->
+    <v:String x:Key="b_okay">Добре</v:String>
+    <v:String x:Key="b_close">Затвори</v:String>
+
+    <!-- Main window -->
+    <v:String x:Key="l_objects_catalogue">Каталог на обектите</v:String>
+    <v:String x:Key="l_admin_panel">Панел на администратора</v:String>
+    <v:String x:Key="l_support_project">Подкрепа за проекта</v:String>
+    <v:String x:Key="l_contacts">Свържете се с нас</v:String>
+    <v:String x:Key="l_web">Сайт</v:String>
+    <v:String x:Key="tbx_find_by_name">Търсене по име...</v:String>
+    <v:String x:Key="tb_opening_date">Дата на отваряне:</v:String>
+    <v:String x:Key="tb_scp">Сидеричен период на циркулация</v:String>
+    <v:String x:Key="tb_ovelocity">Орбитална скорост</v:String>
+    <v:String x:Key="tb_inclination">Наклон</v:String>
+    <v:String x:Key="tb_satelites">Сателити</v:String>
+    <v:String x:Key="tb_whose_satelite">Чий сателит</v:String>
+    <v:String x:Key="tb_eradius">Екваториален радиус</v:String>
+    <v:String x:Key="tb_pradius">Полярен радиус</v:String>
+    <v:String x:Key="tb_avg_radius">Среден радиус</v:String>
+    <v:String x:Key="tb_s">Площад</v:String>
+    <v:String x:Key="tb_v">Обем</v:String>
+    <v:String x:Key="tb_m">Тегло</v:String>
+    <v:String x:Key="tb_avg_dens">Средна плътност</v:String>
+    <v:String x:Key="tb_g">Гравитационно ускорение</v:String>
+    <v:String x:Key="tb_v1">Първа космическа скорост</v:String>
+    <v:String x:Key="tb_v2">Втора космическа скорост</v:String>
+    <v:String x:Key="l_open_web">Щракването върху Добре ще отвори външния браузър. Искате ли да продължите?</v:String>
+    <v:String x:Key="l_api_failed">Достъпът до сървъра е неуспешен. Вашият акаунт ще бъде изключен. Влезте отново.</v:String>
+
+    <!-- Settings window -->
+    <v:String x:Key="head_settings_window">EllipseSpace - Настройки</v:String>
+    <v:String x:Key="l_language">Език</v:String>
+    <v:String x:Key="l_language_explanation">Задаване на езика на програмата.</v:String>
+    <v:String x:Key="l_timer_tick">Отметка за актуализация</v:String>
+    <v:String x:Key="l_timer_tick_explanation">Отбележете, за да актуализирате временния каталог на обектите (в минути).</v:String>
+    <v:String x:Key="b_save">Запазете</v:String>
+    <v:String x:Key="l_invalid_settings">Въвели сте невалидна стойност за някое от полетата.</v:String>
+    <v:String x:Key="l_version">Версия</v:String>
+
+    <!-- Class App -->
+    <v:String x:Key="l_exception_1">По време на изпълнението на програмата се появи следната грешка:</v:String>
+    <v:String x:Key="l_exception_2">Натискането на който и да е клавиш ще затвори програмата.</v:String>
+
+    <!-- Units of measure -->
+    <v:String x:Key="l_day">д.</v:String>
+    <v:String x:Key="l_kilometers_per_second">км/сек</v:String>
+    <v:String x:Key="l_angle">°</v:String>
+    <v:String x:Key="l_kilometer">км</v:String>
+    <v:String x:Key="l_kilometer_squared">км²</v:String>
+    <v:String x:Key="l_kilometer_per_qube">км³</v:String>
+    <v:String x:Key="l_kilo">кг</v:String>
+    <v:String x:Key="l_gramms_per_centimetr_per_qube">гр/см³</v:String>
+    <v:String x:Key="l_meter_per_second_squared">м/сек²</v:String>
+    <v:String x:Key="l_kilometer_per_second">км/сек</v:String>
+
+</ResourceDictionary>

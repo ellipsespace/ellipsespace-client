@@ -1,5 +1,4 @@
 ﻿using EllipseSpaceClient.Core.Configuration;
-using EllipseSpaceClient.Core.Version;
 using System;
 using System.Globalization;
 using System.Windows;
@@ -22,7 +21,7 @@ namespace EllipseSpaceClient.Pages
                 item.Content = App.LanguagesNames[lang.Name];
                 languagesCB.Items.Add(item);
 
-                if (item.Content == App.Language.Name)
+                if (item.Tag == App.Language.Name)
                     languagesCB.SelectedItem = item.Content;
             }
 
