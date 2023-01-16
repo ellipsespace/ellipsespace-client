@@ -90,7 +90,7 @@ namespace EllipseSpaceClient.Pages
         {
             string entred = ((TextBox)sender).Text;
 
-            var finded = CatalogueObjectRepository.Repository.Where(obj => obj.Name.Contains(entred));
+            var finded = CatalogueObjectRepository.Repository.Where(obj => obj.Name.ToLower().Contains(entred.ToLower()));
             FillObjectCatalogueList(finded.ToArray());
         }
 
