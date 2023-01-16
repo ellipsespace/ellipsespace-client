@@ -65,4 +65,16 @@
     <v:String x:Key="l_exception_1">Εμφανίστηκε το ακόλουθο σφάλμα κατά την εκτέλεση του προγράμματος:</v:String>
     <v:String x:Key="l_exception_2">Το πάτημα οποιουδήποτε πλήκτρου θα κλείσει το πρόγραμμα.</v:String>
 
+    <!-- Units of measure -->
+    <v:String x:Key="l_day">η.</v:String>
+    <v:String x:Key="l_kilometers_per_second">χιλιόμετρο/δευτερόλεπτο</v:String>
+    <v:String x:Key="l_angle">°</v:String>
+    <v:String x:Key="l_kilometer">χιλιόμετρα</v:String>
+    <v:String x:Key="l_kilometer_squared">χιλιόμετρα²</v:String>
+    <v:String x:Key="l_kilometer_per_qube">χιλιόμετρα³</v:String>
+    <v:String x:Key="l_kilo">κιλό</v:String>
+    <v:String x:Key="l_gramms_per_centimetr_per_qube">γραμμάρια/cm³</v:String>
+    <v:String x:Key="l_meter_per_second_squared">μέτρα/δευτερόλεπτο²</v:String>
+    <v:String x:Key="l_kilometer_per_second">χιλιόμετρα/δευτερόλεπτο</v:String>
+
 </ResourceDictionary>

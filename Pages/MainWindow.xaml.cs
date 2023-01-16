@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 using EllipseSpaceClient.Core.CatologueObjectRepository;
@@ -104,33 +105,28 @@ namespace EllipseSpaceClient.Pages
                 objectNameTB.Text = obj.Name;
                 objectODateTimeTB.Text = obj.OpeningDateTime;
                 objectDescriptionTB.Text = obj.Description;
-                var temp = Path.GetTempFileName();
                 string link = obj.Photos[0];
 
-                using (var client = new WebClient())
+                if (Uri.IsWellFormedUriString(link, UriKind.Absolute))
                 {
-                    if (Uri.IsWellFormedUriString(link, UriKind.Absolute))
-                    {
-                        client.DownloadDataAsync(new Uri(link));
-                        objectPhoto.Source = new BitmapImage(new Uri(temp));
-                    }
+                    objectPhoto.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(link);
                 }
 
-                objectSCoversionPeriodTB.Text = obj.SidericConversionPeriod.ToString();
-                objectOrbitalVelTB.Text = obj.BodyOrbitalVelocity.ToString();
-                objectInclinationTB.Text = obj.Inclination.ToString();
+                objectSCoversionPeriodTB.Text =  $"{obj.SidericConversionPeriod} {Application.Current.Resources["l_day"]}";
+                objectOrbitalVelTB.Text = $"{obj.BodyOrbitalVelocity} {Application.Current.Resources["l_kilometers_per_second"]}";
+                objectInclinationTB.Text = $"{obj.Inclination}{Application.Current.Resources["l_angle"]}"; ;
                 objectSatelitesTB.Text = string.Join('\n', obj.Satelites);
                 objectWhoseSateliteTB.Text = obj.WhoseSatelite;
-                objectEqRadiusTB.Text = obj.EquatorialRadius.ToString();
-                objectPolarRadiusTB.Text = obj.PolarRadius.ToString();
-                objectAvgRadiusTB.Text = obj.AverageRadius.ToString();
-                objectSTB.Text = string.Format("{0:e}", obj.Square);
-                objectVTB.Text = string.Format("{0:e}", obj.Volume);
-                objectMTB.Text = string.Format("{0:e}", obj.Weight);
-                objectPTB.Text = obj.AverageDensity.ToString();
-                objectGTB.Text = obj.GravityAcceleration.ToString();
-                objectV1TB.Text = obj.FirstSpaceVelocity.ToString();
-                objectV2TB.Text = obj.SecondSpaceVelocity.ToString();
+                objectEqRadiusTB.Text = $"{obj.EquatorialRadius} {Application.Current.Resources["l_kilometer"]}";
+                objectPolarRadiusTB.Text = $"{obj.PolarRadius} {Application.Current.Resources["l_kilometer"]}";
+                objectAvgRadiusTB.Text = $"{obj.AverageRadius} {Application.Current.Resources["l_kilometer"]}";
+                objectSTB.Text = $"{string.Format("{0:e}", obj.Square)} {Application.Current.Resources["l_kilometer_squared"]}";
+                objectVTB.Text = $"{string.Format("{0:e}", obj.Volume)} {Application.Current.Resources["l_kilometer_per_qube"]}";
+                objectMTB.Text = $"{string.Format("{0:e}", obj.Volume)} {Application.Current.Resources["l_kilo"]}";
+                objectPTB.Text = $"{obj.AverageDensity} {Application.Current.Resources["l_gramms_per_centimetr_per_qube"]}";
+                objectGTB.Text = $"{obj.GravityAcceleration} {Application.Current.Resources["l_meter_per_second_squared"]}";
+                objectV1TB.Text = $"{obj.FirstSpaceVelocity} {Application.Current.Resources["l_kilometer_per_second"]}";
+                objectV2TB.Text = $"{obj.SecondSpaceVelocity} {Application.Current.Resources["l_kilometer_per_second"]}";
             }
 
             objectInfoBorder.Visibility = Visibility.Visible;

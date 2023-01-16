@@ -80,7 +80,7 @@
 
                         <StackPanel Orientation="Vertical" Margin="15">
                             <StackPanel Orientation="Horizontal">
-                                <TextBox x:Name="searchTB" Style="{DynamicResource MaterialDesignFloatingHintTextBox}" Foreground="{DynamicResource MaterialDesignPaper}" TextChanged="searchTB_TextChanged" materialDesign:HintAssist.Hint="{DynamicResource tbx_find_by_name}"/>
+                                <TextBox x:Name="searchTB" Style="{DynamicResource MaterialDesignFilledTextBox}" Foreground="{DynamicResource MaterialDesignPaper}" TextChanged="searchTB_TextChanged" materialDesign:HintAssist.Hint="{DynamicResource tbx_find_by_name}"/>
 
                             </StackPanel>
                             <WrapPanel x:Name="catalogueObjectsList" Margin="10" Orientation="Horizontal">
@@ -107,7 +107,7 @@
 
                             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right" Orientation="Vertical" Margin="10">
                                 <Image x:Name="objectPhoto" Margin="0 0 0 10"/>
-                                <Grid x:Name="objectPropertiesGrid" ShowGridLines="True">
+                                <Grid x:Name="objectPropertiesGrid">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition/>
                                         <ColumnDefinition/>

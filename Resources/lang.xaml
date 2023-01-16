@@ -78,4 +78,16 @@
     <v:String x:Key="l_exception_1">The following error occurred while the program was running:</v:String>
     <v:String x:Key="l_exception_2">Pressing any key will close the program.</v:String>
 
+    <!-- Units of measure -->
+    <v:String x:Key="l_day">days</v:String>
+    <v:String x:Key="l_kilometers_per_second">km/sec</v:String>
+    <v:String x:Key="l_angle">°</v:String>
+    <v:String x:Key="l_kilometer">km</v:String>
+    <v:String x:Key="l_kilometer_squared">km²</v:String>
+    <v:String x:Key="l_kilometer_per_qube">km³</v:String>
+    <v:String x:Key="l_kilo">kg</v:String>
+    <v:String x:Key="l_gramms_per_centimetr_per_qube">g/cm³</v:String>
+    <v:String x:Key="l_meter_per_second_squared">m/s²</v:String>
+    <v:String x:Key="l_kilometer_per_second">km/sec</v:String>
+
 </ResourceDictionary>
