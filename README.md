@@ -1,4 +1,10 @@
 ![GitHub](https://img.shields.io/github/license/ellipsespace/ellipsespace-client?style=for-the-badge)
+![GitHub contributors](https://img.shields.io/github/contributors/ellipsespace/ellipsespace-client?style=for-the-badge)
+
+![GitHub Release Date](https://img.shields.io/github/release-date/ellipsespace/ellipsespace-client)
+![GitHub last commit](https://img.shields.io/github/last-commit/ellipsespace/ellipsespace-client)
+![GitHub commits since tagged version](https://img.shields.io/github/commits-since/ellipsespace/ellipsespace-client/latest)
+
 # EllipseSpaceClient
 
 > - [English](#English)
@@ -65,7 +71,7 @@ Na stronie w zakładce Assets znajdą się dwa archiwa zip: EllipseSpaceClient.z
 - Moduł aktualizacji najnowszej dostępnej wersji (może zostać usunięty);
 
 Drugie archiwum, w porównaniu z pierwszym, nie posiada:
-- folder
+- folder conf/
 - moduł aktualizacji;
 
 To archiwum jest pobierane, jeśli masz już klienta i po prostu potrzebujesz go zaktualizować (uwaga: to archiwum może być pobrane przez sam program po Twojej zgodzie. Jak tylko pojawi się nowa aktualizacja nie trzeba wchodzić na stronę i pobierać archiwum).
@@ -90,6 +96,7 @@ To archiwum jest pobierane, jeśli masz już klienta i po prostu potrzebujesz go
 Το δεύτερο αρχείο, σε σύγκριση με το πρώτο, δεν έχει:
 - φάκελος conf/
 - ενότητα ενημέρωσης,
+
 Αυτό το αρχείο κατεβαίνει αν έχετε ήδη ένα πρόγραμμα-πελάτη και απλά πρέπει να το ενημερώσετε (σημείωση: αυτό το αρχείο μπορεί να κατεβεί από το ίδιο το πρόγραμμα μετά από την άδειά σας. Μόλις κυκλοφορήσει μια νέα ενημερωμένη έκδοση, δεν χρειάζεται να μεταβείτε στον ιστότοπο και να κατεβάσετε το αρχείο).
 
 ### Δημιουργήθηκε με
