@@ -5,6 +5,8 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/ellipsespace/ellipsespace-client)
 ![GitHub commits since tagged version](https://img.shields.io/github/commits-since/ellipsespace/ellipsespace-client/latest)
 
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fellipsespace%2Fellipsespace-client.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fellipsespace%2Fellipsespace-client?ref=badge_large)
+
 # EllipseSpaceClient
 
 > - [English](#English)
