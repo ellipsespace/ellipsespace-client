@@ -57,6 +57,22 @@
                     <Separator Style="{DynamicResource MaterialDesignLightSeparator}" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Margin="10 -20"/>
                 </Grid>
 
+                <Grid Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0" Orientation="Vertical">
+                        <TextBlock Style="{DynamicResource MaterialDesignSubtitle1TextBlock}" Foreground="{DynamicResource MaterialDesignPaper}" Text="{DynamicResource l_logout}"/>
+                        <TextBlock Style="{DynamicResource MaterialDesignOverlineTextBlock}" Width="Auto" TextWrapping="Wrap" Foreground="DarkGray" Text="{DynamicResource l_logout_explanation}"/>
+                    </StackPanel>
+
+                    <Button x:Name="logoutButton" Style="{DynamicResource MaterialDesignFlatAccentButton}" Content="{DynamicResource b_logout}" Grid.Column="1" Click="logoutButton_Click" Foreground="#FF4040" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+
+                    <Separator Style="{DynamicResource MaterialDesignLightSeparator}" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Margin="10 -20"/>
+                </Grid>
+
                 <Button x:Name="saveButton" Click="saveButton_Click" Style="{DynamicResource MaterialDesignFlatButton}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="{DynamicResource b_save}"/>
                 <TextBlock x:Name="versionText" Style="{DynamicResource MaterialDesignOverlineTextBlock}" Foreground="DarkGray" Text="{DynamicResource l_version}" HorizontalAlignment="Center"/>
             </StackPanel>

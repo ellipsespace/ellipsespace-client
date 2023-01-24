@@ -140,8 +140,13 @@ namespace EllipseSpaceClient.Pages
             if(success)
             {
                 var pref = window.GetPreferences();
+                var conf = Configuration.Create();
+
                 App.Language = pref.Item1;
                 SetTimer(new TimeSpan(0, pref.Item2, 0));
+
+                conf.Tick = pref.Item2;
+                conf.Save();
             }
         }
 

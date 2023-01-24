@@ -5,6 +5,7 @@ using System.IO;
 using System.Net.Http;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using Windows.Services.Maps;
 
 namespace EllipseSpaceClient.Core.Configuration
 {
@@ -73,7 +74,12 @@ namespace EllipseSpaceClient.Core.Configuration
 
         internal static void Logout()
         {
-            var configuration = new Configuration();
+            var configuration = Create();
+
+            configuration.JwtToken = string.Empty;
+            configuration.Id = 0;
+            configuration.SessionName = string.Empty;
+            configuration.AccessLevel = 0;
             configuration.Save();
         }
 

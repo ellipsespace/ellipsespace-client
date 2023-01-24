@@ -19,23 +19,29 @@ namespace EllipseSpaceClient.Pages
                 var item = new ComboBoxItem();
                 item.Tag = lang.Name;
                 item.Content = App.LanguagesNames[lang.Name];
-                languagesCB.Items.Add(item);
+                int id =languagesCB.Items.Add(item);
 
-                if (item.Tag == App.Language.Name)
-                    languagesCB.SelectedItem = item.Content;
+                if(item.Tag.ToString() == App.Language.Name)
+                    languagesCB.SelectedIndex = id;
             }
 
-            var conf = new Configuration();
-            foreach(var item in updateTickCB.Items)
+            var conf = Configuration.Create();
+            foreach(ComboBoxItem item in updateTickCB.Items)
             {
-                if((item as ComboBoxItem).Content == Convert.ToString(conf.Tick))
-                {
-                    updateTickCB.SelectedItem = item as ComboBoxItem;
-                    break;
-                }
+                if (item.Content.ToString() == Convert.ToString(conf.Tick))
+                    updateTickCB.SelectedIndex = updateTickCB.Items.IndexOf(item);
             }
 
             versionText.Text += $" {Version.Local()}";
+        }
+
+        private void logoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (new MessageWindow(MaterialDesignThemes.Wpf.PackIconKind.WarningBoxOutline, Application.Current.Resources["l_logout_message"].ToString()).ShowDialog() == true)
+            {
+                Configuration.Logout();
+                Application.Current.Shutdown();
+            }
         }
 
         private void saveButton_Click(object sender, RoutedEventArgs e)

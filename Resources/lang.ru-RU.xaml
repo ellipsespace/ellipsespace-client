@@ -57,6 +57,10 @@
     <v:String x:Key="l_language_explanation">Установка языка программы.</v:String>
     <v:String x:Key="l_timer_tick">Тик обновления</v:String>
     <v:String x:Key="l_timer_tick_explanation">Период обновления временного каталога объектов (в минутах).</v:String>
+    <v:String x:Key="l_logout">Выйти из аккаунта</v:String>
+    <v:String x:Key="l_logout_explanation">По нажатию на кнопку будет произведен выход из аккаунта.</v:String>
+    <v:String x:Key="b_logout">Выйти</v:String>
+    <v:String x:Key="l_logout_message">Нажатие на кнопку ОК приведет к выходу из аккаунта, который вы не сможете отменить.</v:String>
     <v:String x:Key="b_save">Сохранить</v:String>
     <v:String x:Key="l_invalid_settings">Вы указали недопустимое значение для одного из полей.</v:String>
     <v:String x:Key="l_version">Версия </v:String>

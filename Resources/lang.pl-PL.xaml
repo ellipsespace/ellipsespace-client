@@ -57,6 +57,10 @@
     <v:String x:Key="l_language_explanation">Ustawienie języka programu.</v:String>
     <v:String x:Key="l_timer_tick">Okres odnowienia</v:String>
     <v:String x:Key="l_timer_tick_explanation">Zaznacz, aby zaktualizować tymczasowy katalog obiektów (w minutach).</v:String>
+    <v:String x:Key="l_logout">Wyloguj się z konta</v:String>
+    <v:String x:Key="l_logout_explanation">Kliknięcie przycisku spowoduje wylogowanie z konta.</v:String>
+    <v:String x:Key="b_logout">Wyloguj się</v:String>
+    <v:String x:Key="l_logout_message">Kliknięcie przycisku Dobra powoduje wyjście z konta, którego nie można anulować.</v:String>
     <v:String x:Key="b_save">Zapisz</v:String>
     <v:String x:Key="l_invalid_settings">Wprowadziłeś nieprawidłową wartość dla jednego z pól.</v:String>
     <v:String x:Key="l_version">Wersja </v:String>

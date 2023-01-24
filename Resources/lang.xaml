@@ -70,6 +70,10 @@
     <v:String x:Key="l_language_explanation">Setting the program language.</v:String>
     <v:String x:Key="l_timer_tick">Update tick</v:String>
     <v:String x:Key="l_timer_tick_explanation">Tick to update the temporary catalog of objects (in minutes).</v:String>
+    <v:String x:Key="l_logout">Log out of your account</v:String>
+    <v:String x:Key="l_logout_explanation">Clicking the button will log out of the account.</v:String>
+    <v:String x:Key="b_logout">Log out</v:String>
+    <v:String x:Key="l_logout_message">Clicking the OK button will exit the account, which you cannot cancel.</v:String>
     <v:String x:Key="b_save">Save</v:String>
     <v:String x:Key="l_invalid_settings">You entered an invalid value for one of the fields.</v:String>
     <v:String x:Key="l_version">Version </v:String>

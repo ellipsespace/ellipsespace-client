@@ -57,6 +57,10 @@
     <v:String x:Key="l_language_explanation">Задаване на езика на програмата.</v:String>
     <v:String x:Key="l_timer_tick">Отметка за актуализация</v:String>
     <v:String x:Key="l_timer_tick_explanation">Отбележете, за да актуализирате временния каталог на обектите (в минути).</v:String>
+    <v:String x:Key="l_logout">Излезте от профила си</v:String>
+    <v:String x:Key="l_logout_explanation">Щракването върху бутона ще доведе до излизане от профила.</v:String>
+    <v:String x:Key="b_logout">Излизане от системата</v:String>
+    <v:String x:Key="l_logout_message">Щракването върху бутона Добре ще доведе до излизане от акаунта, което не може да бъде отменено.</v:String>
     <v:String x:Key="b_save">Запазете</v:String>
     <v:String x:Key="l_invalid_settings">Въвели сте невалидна стойност за някое от полетата.</v:String>
     <v:String x:Key="l_version">Версия</v:String>

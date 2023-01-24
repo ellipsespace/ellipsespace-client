@@ -57,6 +57,10 @@
     <v:String x:Key="l_language_explanation">Ρύθμιση της γλώσσας του προγράμματος.</v:String>
     <v:String x:Key="l_timer_tick">Ενημέρωση τσιμπούρι</v:String>
     <v:String x:Key="l_timer_tick_explanation">Επιλέξτε για να ενημερώσετε τον προσωρινό κατάλογο αντικειμένων (σε λεπτά).</v:String>
+    <v:String x:Key="l_logout">Αποσυνδεθείτε από το λογαριασμό σας</v:String>
+    <v:String x:Key="l_logout_explanation">Κάνοντας κλικ στο κουμπί θα αποσυνδεθείτε από το λογαριασμό.</v:String>
+    <v:String x:Key="b_logout">Αποσύνδεση</v:String>
+    <v:String x:Key="l_logout_message">Κάνοντας κλικ στο κουμπί Εντάξει θα βγείτε από το λογαριασμό, τον οποίο δεν μπορείτε να ακυρώσετε.</v:String>
     <v:String x:Key="b_save">Αποθήκευση</v:String>
     <v:String x:Key="l_invalid_settings">Εισάγατε μη έγκυρη τιμή για ένα από τα πεδία.</v:String>
     <v:String x:Key="l_version">Έκδοση </v:String>
