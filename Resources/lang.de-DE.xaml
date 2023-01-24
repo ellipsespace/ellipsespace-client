@@ -1,0 +1,84 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+
+    <!-- Authorization window -->
+    <v:String x:Key="head_authorization_window">EllipseSpace - Anmelden</v:String>
+    <v:String x:Key="l_welcome">Herzlich willkommen!</v:String>
+    <v:String x:Key="l_authorization_warning">Wenn Sie noch kein EllipseSpace-Konto haben, verwenden Sie die Schaltfläche Registrieren</v:String>
+    <v:String x:Key="h_login">Anmeldung</v:String>
+    <v:String x:Key="h_password">Passwort</v:String>
+    <v:String x:Key="b_log_in">Einloggen</v:String>
+    <v:String x:Key="b_registration">Anmeldung</v:String>
+    <v:String x:Key="l_new_version_1">Es wurde eine neue Version des Clients entdeckt:</v:String>
+    <v:String x:Key="l_new_version_2">. Wenn Sie es installieren möchten, klicken Sie auf OK.</v:String>
+    <v:String x:Key="l_update_downloaded">Die Aktualisierungsdatei wurde erfolgreich heruntergeladen. Zur Installation wird ein externes Modul ausgeführt. Wenn Sie keinen externen Updater haben, entpacken Sie einfach den Inhalt der Zip-Datei in den Programmordner.</v:String>
+
+    <!-- Registration window -->
+    <v:String x:Key="head_registration_window">EllipseSpace - Registrierung</v:String>
+    <v:String x:Key="l_registration_warning">Wenn Sie bereits ein EllipseSpace-Konto haben, verwenden Sie das vorherige Fenster</v:String>
+    <v:String x:Key="h_password_repeat">Passwort (Wiederholung)</v:String>
+    <v:String x:Key="l_passwords_not_match">Die Passwörter stimmen nicht überein.</v:String>
+    <v:String x:Key="l_account_registred">Das Konto ist registriert. Um sich anzumelden, kehren Sie zum vorherigen Fenster zurück.</v:String>
+
+    <!-- Message window -->
+    <v:String x:Key="b_okay">Okay</v:String>
+    <v:String x:Key="b_close">Schließen Sie</v:String>
+
+    <!-- Main window -->
+    <v:String x:Key="l_objects_catalogue">Katalog der Objekte</v:String>
+    <v:String x:Key="l_admin_panel">Verwaltungsbereich</v:String>
+    <v:String x:Key="l_support_project">Unterstützung des Projekts</v:String>
+    <v:String x:Key="l_contacts">Kontakt</v:String>
+    <v:String x:Key="l_web">Website</v:String>
+    <v:String x:Key="tbx_find_by_name">Suche nach Namen...</v:String>
+    <v:String x:Key="tb_opening_date">Datum der Eröffnung:</v:String>
+    <v:String x:Key="tb_scp">Siderischer Umstellungszeitraum</v:String>
+    <v:String x:Key="tb_ovelocity">Orbitalgeschwindigkeit</v:String>
+    <v:String x:Key="tb_inclination">Neigung</v:String>
+    <v:String x:Key="tb_satelites">Sateliten</v:String>
+    <v:String x:Key="tb_whose_satelite">Wessen Satellit</v:String>
+    <v:String x:Key="tb_eradius">Äquatorialer Radius</v:String>
+    <v:String x:Key="tb_pradius">Polarradius</v:String>
+    <v:String x:Key="tb_avg_radius">Durchschnittlicher Radius</v:String>
+    <v:String x:Key="tb_s">Quadratisch</v:String>
+    <v:String x:Key="tb_v">Band</v:String>
+    <v:String x:Key="tb_m">Gewicht</v:String>
+    <v:String x:Key="tb_avg_dens">Durchschnittliche Dichte</v:String>
+    <v:String x:Key="tb_g">Schwerkraftbeschleunigung</v:String>
+    <v:String x:Key="tb_v1">Erste Raumgeschwindigkeit</v:String>
+    <v:String x:Key="tb_v2">Zweite Raumgeschwindigkeit</v:String>
+    <v:String x:Key="l_open_web">Wenn Sie auf OK klicken, wird der externe Browser geöffnet. Möchten Sie fortfahren?</v:String>
+    <v:String x:Key="l_api_failed">Der Zugriff auf den Server war nicht erfolgreich. Ihr Konto wird abgemeldet. Melden Sie sich erneut an.</v:String>
+
+    <!-- Settings window -->
+    <v:String x:Key="head_settings_window">EllipseSpace - Einstellungen</v:String>
+    <v:String x:Key="l_language">Sprache</v:String>
+    <v:String x:Key="l_language_explanation">Einstellung der Programmsprache.</v:String>
+    <v:String x:Key="l_timer_tick">Häkchen aktualisieren</v:String>
+    <v:String x:Key="l_timer_tick_explanation">Ankreuzen, um den temporären Objektkatalog zu aktualisieren (in Minuten).</v:String>
+    <v:String x:Key="l_logout">Von Ihrem Konto abmelden</v:String>
+    <v:String x:Key="l_logout_explanation">Wenn Sie auf die Schaltfläche klicken, wird das Konto abgemeldet.</v:String>
+    <v:String x:Key="b_logout">Abmelden</v:String>
+    <v:String x:Key="l_logout_message">Wenn Sie auf die Schaltfläche OK klicken, wird das Konto geschlossen, was Sie nicht rückgängig machen können.</v:String>
+    <v:String x:Key="b_save">Speichern Sie</v:String>
+    <v:String x:Key="l_invalid_settings">Sie haben für eines der Felder einen ungültigen Wert eingegeben.</v:String>
+    <v:String x:Key="l_version">Version</v:String>
+
+    <!-- Class App -->
+    <v:String x:Key="l_exception_1">Während der Ausführung des Programms ist der folgende Fehler aufgetreten:</v:String>
+    <v:String x:Key="l_exception_2">Durch Drücken einer beliebigen Taste wird das Programm geschlossen.</v:String>
+
+    <!-- Units of measure -->
+    <v:String x:Key="l_day">Tage</v:String>
+    <v:String x:Key="l_kilometers_per_second">km/Sek</v:String>
+    <v:String x:Key="l_angle">°</v:String>
+    <v:String x:Key="l_kilometer">km</v:String>
+    <v:String x:Key="l_kilometer_squared">km²</v:String>
+    <v:String x:Key="l_kilometer_per_qube">km³</v:String>
+    <v:String x:Key="l_kilo">kg</v:String>
+    <v:String x:Key="l_gramms_per_centimetr_per_qube">g/cm³</v:String>
+    <v:String x:Key="l_meter_per_second_squared">m/s²</v:String>
+    <v:String x:Key="l_kilometer_per_second">km/Sek</v:String>
+
+</ResourceDictionary>

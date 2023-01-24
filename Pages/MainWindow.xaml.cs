@@ -144,6 +144,7 @@ namespace EllipseSpaceClient.Pages
                 App.Language = pref.Item1;
                 SetTimer(new TimeSpan(0, pref.Item2, 0));
 
+                conf.DefaultLanguage = pref.Item1.Name;
                 conf.Tick = pref.Item2;
                 conf.Save();
             }

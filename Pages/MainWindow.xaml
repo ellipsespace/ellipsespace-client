@@ -44,7 +44,7 @@
                             <TextBlock Text="{DynamicResource l_admin_panel}" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem IsEnabled="False" x:Name="ItemSupportProject" Height="60">
+                    <ListViewItem x:Name="ItemSupportProject" Height="60" Selected="ItemSupportProject_Selected">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Ticket" Height="25" Width="25" Margin="10"/>
                             <TextBlock Text="{DynamicResource l_support_project}" VerticalAlignment="Center"  Margin="20 10"/>

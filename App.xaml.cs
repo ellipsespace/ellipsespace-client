@@ -6,7 +6,6 @@ using System.Linq;
 using System.Windows;
 using System.Threading;
 using EllipseSpaceClient.Core.Configuration;
-using System.Diagnostics.Contracts;
 
 namespace EllipseSpaceClient
 {
@@ -18,7 +17,8 @@ namespace EllipseSpaceClient
             { "ru-RU", "Русский" },
             { "el", "Ελληνικά" },
             { "pl-PL", "Polska" },
-            { "bg-BG", "Български" }
+            { "bg-BG", "Български" },
+            { "de-DE", "Deutsch" }
         };
         public static event EventHandler LanguageChanged;
 
@@ -91,6 +91,7 @@ namespace EllipseSpaceClient
             languages.Add(new CultureInfo("el"));
             languages.Add(new CultureInfo("pl-PL"));
             languages.Add(new CultureInfo("bg-BG"));
+            languages.Add(new CultureInfo("de-DE"));
 
             LanguageChanged += App_LanguageChanged;
             Language = CultureInfo.GetCultureInfo(Configuration.Create().DefaultLanguage);
