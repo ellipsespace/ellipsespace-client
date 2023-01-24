@@ -8,7 +8,6 @@ using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 using EllipseSpaceClient.Core.CatologueObjectRepository;
 using EllipseSpaceClient.Core.Configuration;
@@ -155,6 +154,13 @@ namespace EllipseSpaceClient.Pages
             var adminPanelWindow = new AdminPanelWindow();
             adminPanelWindow.Owner = this;
             adminPanelWindow.Show();
+        }
+
+        private void ItemSupportProject_Selected(object sender, RoutedEventArgs e)
+        {
+            if (new MessageWindow(MaterialDesignThemes.Wpf.PackIconKind.AsteriskCircleOutline, Application.Current.Resources["l_open_web"].ToString())
+                .ShowDialog() == true)
+            OpenUrl("https://boosty.to/ellipsespace");
         }
 
         private void ItemWeb_Selected(object sender, RoutedEventArgs e)
