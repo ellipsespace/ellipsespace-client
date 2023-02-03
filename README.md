@@ -13,6 +13,9 @@
 > - [Русский](#Русский)
 > - [Polska](#Polska)
 > - [Ελληνικά](#Ελληνικά)
+> - [Deutsch](#Deutsch)
+> - [Български](#Български)
+
 ## English
 EllipseSpaceClient is the official client from the EllipseSpace developers and is supported on Windows, MacOS and Linux.
 
@@ -102,6 +105,54 @@ To archiwum jest pobierane, jeśli masz już klienta i po prostu potrzebujesz go
 Αυτό το αρχείο κατεβαίνει αν έχετε ήδη ένα πρόγραμμα-πελάτη και απλά πρέπει να το ενημερώσετε (σημείωση: αυτό το αρχείο μπορεί να κατεβεί από το ίδιο το πρόγραμμα μετά από την άδειά σας. Μόλις κυκλοφορήσει μια νέα ενημερωμένη έκδοση, δεν χρειάζεται να μεταβείτε στον ιστότοπο και να κατεβάσετε το αρχείο).
 
 ### Δημιουργήθηκε με
+
+![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
+![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
+![Visual Studio](https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white)
+
+## Deutsch
+EllipseSpaceClient ist der offizielle Client von den EllipseSpace-Entwicklern und wird auf Windows, MacOS und Linux unterstützt.
+
+### Installieren
+
+Um zu installieren, folge diesem [Link](https://github.com/ellipsespace/ellipsespace-client/releases/latest).
+
+Auf der Seite finden Sie unter dem Reiter Assets zwei Zip-Archive: EllipseSpaceClient.zip und upd.zip. Laden Sie das erste Archiv herunter, wenn Sie den EllipseSpaceClient noch nicht auf Ihrem Computer haben. Dieses Archiv enthält:
+- EllipseSpaceClient selbst;
+- Das Update-Modul der letzten verfügbaren Version (Sie können es löschen);
+
+Das zweite Archiv enthält, im Gegensatz zum ersten, nichts:
+- conf/ Ordner
+- Update-Modul;
+
+Dieses Archiv wird heruntergeladen, wenn Sie bereits einen Client haben und diesen nur aktualisieren wollen (Hinweis: Dieses Archiv kann nach Ihrer Zustimmung vom Programm selbständig heruntergeladen werden. Bei der Veröffentlichung eines neuen Updates müssen Sie nicht auf die Website gehen und das Archiv herunterladen).
+
+### Erstellt mit
+
+![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
+![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
+![Visual Studio](https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white)
+
+## Български
+EllipseSpaceClient е официалният клиент на разработчиците на EllipseSpace и се поддържа под Windows, MacOS и Linux.
+
+### Инсталиране
+
+За да инсталирате, следвайте тази [връзка](https://github.com/ellipsespace/ellipsespace-client/releases/latest).
+
+На страницата в раздела Assets (Активи) ще се съдържат два zip архива: EllipseSpaceClient.zip и upd.zip. Изтеглете първия архив, ако досега не сте имали EllipseSpaceClient на компютъра си. Този архив съдържа:
+- самия EllipseSpaceClient;
+- Модула за актуализация на последната налична версия (можете да го изтриете);
+
+Вторият архив, в сравнение с първия, не съдържа:
+- conf/ папка
+- модул за актуализация;
+
+Този архив се изтегля, ако вече имате клиент и просто трябва да го актуализирате (забележка: този архив може да бъде изтеглен самостоятелно от програмата след вашето разрешение. При пускане на нова актуализация не е необходимо да ходите на сайта и да изтегляте архива).
+
+### Created with
 
 ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
 ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
