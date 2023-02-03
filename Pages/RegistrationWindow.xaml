@@ -4,13 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EllipseSpaceClient"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        xmlns:viewmodels="clr-namespace:EllipseSpaceClient.ViewModels" 
+        d:DataContext="{d:DesignInstance Type=viewmodels:RegistrationViewModel}"
         TextElement.Foreground="{DynamicResource MaterialDesignPaper}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
         TextOptions.TextFormattingMode="Ideal"
         TextOptions.TextRenderingMode="Auto"
-        FontFamily="{DynamicResource MaterialDesignFont}"
+        FontFamily="{DynamicResource EllipseSpaceUbuntuFont}"
         mc:Ignorable="d"
         Title="{DynamicResource head_registration_window}" Height="450" Width="800" ResizeMode="NoResize">
     <Grid Background="#141414">
@@ -23,12 +25,12 @@
                 <TextBlock Text="{DynamicResource l_welcome}" FontSize="30" FontWeight="DemiBold" Margin="0 0 0 2"/>
                 <TextBlock Text="{DynamicResource l_registration_warning}" FontSize="15" FontWeight="ExtraLight" Margin="0 0 0 10"/>
 
-                <TextBox materialDesign:HintAssist.Hint="{DynamicResource h_login}" materialDesign:HintAssist.Foreground="{DynamicResource MaterialDesignPaper}" x:Name="sessionNameTB" Style="{DynamicResource MaterialDesignFloatingHintTextBox}" Margin="0 0 0 10"></TextBox>
-                <PasswordBox materialDesign:HintAssist.Hint="{DynamicResource h_password}" materialDesign:HintAssist.Foreground="{DynamicResource MaterialDesignPaper}" x:Name="sessionPasswordTB" Style="{DynamicResource MaterialDesignFloatingHintPasswordBox}" Margin="0 0 0 10"></PasswordBox>
-                <PasswordBox materialDesign:HintAssist.Hint="{DynamicResource h_password_repeat}" materialDesign:HintAssist.Foreground="{DynamicResource MaterialDesignPaper}" x:Name="rSessionPasswordTB" Style="{DynamicResource MaterialDesignFloatingHintPasswordBox}" Margin="0 0 0 10"></PasswordBox>
+                <TextBox Text="{Binding SessionName}" materialDesign:HintAssist.Hint="{DynamicResource h_login}" materialDesign:HintAssist.Foreground="{DynamicResource MaterialDesignPaper}" Style="{DynamicResource MaterialDesignFloatingHintTextBox}" Margin="0 0 0 10"/>
+                <PasswordBox Tag="{Binding SessionPassword, Mode=TwoWay}" PasswordChanged="PasswordBox_PasswordChanged" materialDesign:HintAssist.Hint="{DynamicResource h_password}" materialDesign:HintAssist.Foreground="{DynamicResource MaterialDesignPaper}" Style="{DynamicResource MaterialDesignFloatingHintPasswordBox}" Margin="0 0 0 10"/>
+                <PasswordBox Tag="{Binding SessionPasswordRepeat, Mode=TwoWay}" PasswordChanged="PasswordBox_PasswordChanged" materialDesign:HintAssist.Hint="{DynamicResource h_password_repeat}" materialDesign:HintAssist.Foreground="{DynamicResource MaterialDesignPaper}" Style="{DynamicResource MaterialDesignFloatingHintPasswordBox}" Margin="0 0 0 10"/>
 
                 <Grid Margin="0 0 0 10">
-                    <Button x:Name="regButton" Click="regButton_Click" Style="{DynamicResource MaterialDesignFlatLightButton}" HorizontalAlignment="Left" Foreground="#6610f2" Content="{DynamicResource b_registration}"/>
+                    <Button Style="{DynamicResource MaterialDesignFlatLightButton}" Command="{Binding RegistrationCommand}" HorizontalAlignment="Left" Foreground="#6610f2" Content="{DynamicResource b_registration}" Cursor="Hand"/>
                 </Grid>
             </StackPanel>
         </Border>

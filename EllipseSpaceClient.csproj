@@ -11,8 +11,9 @@
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
     <SignAssembly>False</SignAssembly>
     <ErrorReport>none</ErrorReport>
-    <AssemblyVersion>1.0.0</AssemblyVersion>
-    <FileVersion>1.0.0</FileVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
+	<nullable>disable</nullable>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -24,7 +25,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Fonts\Ubuntu\Ubuntu-Bold.ttf" />
+    <None Remove="Resources\Fonts\Ubuntu\Ubuntu-BoldItalic.ttf" />
+    <None Remove="Resources\Fonts\Ubuntu\Ubuntu-Italic.ttf" />
+    <None Remove="Resources\Fonts\Ubuntu\Ubuntu-Light.ttf" />
+    <None Remove="Resources\Fonts\Ubuntu\Ubuntu-LightItalic.ttf" />
+    <None Remove="Resources\Fonts\Ubuntu\Ubuntu-Medium.ttf" />
+    <None Remove="Resources\Fonts\Ubuntu\Ubuntu-MediumItalic.ttf" />
+    <None Remove="Resources\Fonts\Ubuntu\Ubuntu-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Include="Resources\favicon.ico" />
+    <EmbeddedResource Include="Resources\Fonts\Ubuntu\Ubuntu-Bold.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Ubuntu\Ubuntu-BoldItalic.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Ubuntu\Ubuntu-Italic.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Ubuntu\Ubuntu-Light.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Ubuntu\Ubuntu-LightItalic.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Ubuntu\Ubuntu-Medium.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Ubuntu\Ubuntu-MediumItalic.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Ubuntu\Ubuntu-Regular.ttf" />
   </ItemGroup>
 
   <ItemGroup>

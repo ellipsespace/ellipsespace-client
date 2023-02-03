@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace EllipseSpaceClient.Models.ServerStatus
 {
-    internal class ServerStatus
+    public class ServerStatus
     {
         [JsonPropertyName("msg")]
         public string Message { get; set; }

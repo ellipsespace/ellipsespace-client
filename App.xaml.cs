@@ -6,6 +6,7 @@ using System.Linq;
 using System.Windows;
 using System.Threading;
 using EllipseSpaceClient.Core.Configuration;
+using MaterialDesignThemes.Wpf;
 
 namespace EllipseSpaceClient
 {
@@ -106,8 +107,8 @@ namespace EllipseSpaceClient
 
         private void App_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
         {
-            new MessageWindow(MaterialDesignThemes.Wpf.PackIconKind.ErrorOutline, $"{Current.Resources["l_exception_1"]}\n{e.Exception.Message}." +
-                $"\n{Current.Resources["l_exception_2"]}").ShowDialog();
+            WindowManager.ShowDialog(PackIconKind.ErrorOutline, $"{Current.Resources["l_exception_1"]}\n{e.Exception.Message}." +
+                $"\n{Current.Resources["l_exception_2"]}");
             e.Handled = true;
             Current.Shutdown();
         }
